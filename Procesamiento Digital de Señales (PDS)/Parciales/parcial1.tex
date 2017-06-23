@@ -1,0 +1,237 @@
+\documentclass[a4paper,10pt,spanish]{article}
+
+% Preámbulo - Parte A
+
+\usepackage[utf8]{inputenc} % Soporte para los acentos
+\usepackage[T1]{fontenc}
+
+\usepackage[spanish]{babel} % Capítulos, seciones, etc. en español
+
+\usepackage[margin=2cm]{geometry} % Diseño del documento
+
+\usepackage{multicol} % Escribir doble columna
+
+\usepackage{xcolor} % Usar colores
+\usepackage{pstricks}
+
+\usepackage{enumerate} % Cambiar etiquetas de numeración
+\usepackage[shortlabels]{enumitem} % Manejo adicional de etiquetas de numeración
+
+\usepackage{graphicx} % Manejo de gráficos y figuras
+
+\usepackage{makeidx} % Índice alfabético
+
+% Paquetes adicionales de símbolos matemáticos
+\usepackage{amsmath,amssymb,amsfonts,latexsym,cancel} 
+
+% \usepackage{pslatex} % Fuente Times
+% \usepackage{mathpazo} % Fuente Palatino
+% \usepackage{mathptmx} % Fuente Times
+% \usepackage{bookman} % Fuente Bookman
+% \usepackage{newcent} % Fuente New Century Schoolbook
+% \usepackage{helvet} % Fuente Helvetica
+\usepackage{palatino} % Fuente Palatino
+% \usepackage{pxfonts} % Fuente 
+% \usepackage{txfonts} % Fuente
+% \usepackage{concrete} % Fuente
+% \usepackage{cmbright} % Fuente
+% \usepackage{fourier} % Fuente
+
+\usepackage{booktabs} % Opciones adicionales para el entorno tabular
+\usepackage{longtable} % Para tablas de más de una página
+
+\usepackage{tikz} % Creación de gráficos
+
+% Preámbulo - Parte B
+
+\pagestyle{myheadings} % Numeración de página en la parte superior
+
+\title{\Huge Procesamiento Digital de Señales\\
+Parcial 1}
+\author{Darién Julián Ramírez}
+\date{\vspace{-5ex}}
+
+\begin{document}
+
+\maketitle %Crea la página de título
+
+\section{Introducción a Señales}
+
+\begin{enumerate}
+\item Desarrolle la clasificación fenomenológica para las señales dando un ejemplo de señal de cada clase.
+
+\item Describa el procedimiento mediante el cuál podría verificar la estacionariedad de una señal aleatoria. ¿Qué parámetros estadísticos utilizaría en el proceso?
+
+\item Defina estacionariedad y ergodicidad ¿Cuál es la ventaja práctica que brinda el conocimiento \textit{a priori} de que una señal es ergódica?
+
+\item Defina ruido, relación señal ruido (SNR), fuentes de ruido y ejemplifique.
+
+\item Defina transformaciones de rango y transformaciones de dominio. Ejemplifique para cada caso.
+
+\item Describa las etapas de un conversor de señales analógicas a digitales (A/D).
+\end{enumerate}
+
+\section{Introducción a Sistemas}
+
+\begin{enumerate}
+\item Defina y ejemplifique:
+	\begin{enumerate}
+	\item Sistema de Respuesta Finita al Impulso (FIR - MA).
+	\item Sistema AutoRegresivo (AR).
+	\item Sistema causal (no anticipativo) y no causal (anticipativo).
+	\item Sistema Lineal e Invariante en el Tiempo (LTI).
+	\end{enumerate}
+	
+\item ¿Cuáles son los tipos en los que se clasifican los sistemas LTI de tiempo discreto desde el punto de vista de su respuesta al impulso? Defina cada tipo y escriba la ecuación correspondiente.
+
+\item  ¿Cuáles son los tipos en que se dividen los sistemas IIR? Ejemplifique con señales genéricas en $\mathbb{R}^{4}$.
+
+\item Los sistemas de la forma $y[n]=ax[n]+b$. ¿Son sistemas lineales? ¿Que características presentan?
+
+\item Dé una clasificación de sistemas discretos utilizando como criterio las distintas propiedades que presentan. Explique brevemente cada una de las clases.
+
+\item  Defina un sistema LTI de tiempo discreto en base a sus propiedades. Escriba la ecuación genérica que describe su comportamiento.
+
+\item Partiendo de las propiedades de un sistema discreto lineal e invariante en el tiempo (LTI), obtenga la expresión general de la salida $y[n]$ a una entrada $x[n]$ cualquiera.
+
+\item Un sistema lineal tiene una respuesta al impulso que varía con el tiempo en una forma conocida, de modo que usted sabe que la respuesta a una entrada impulsiva $\delta[n-k]$ es $h_{k}[n]$:
+	\begin{enumerate}
+	\item Escriba una expresión que permita encontrar la salida de este sistema para 		cualquier entrada $x[n]$.
+	\item ¿Qué condición deben cumplir las $h_{k}[n]$ para que el sistema sea causal?
+	\end{enumerate}
+
+\end{enumerate}
+
+\section{Convolución Discreta}
+
+\begin{enumerate}
+\item Explique con un ejemplo a partir de dos señales $x[n]$ y $h[n]\in\mathbb{R}^{4}$ la operación para calcular la convolución lineal mediante la denominada \textit{multiplicación término a término.}
+
+\item Explique cómo realizaría las operaciones de convolución lineal y convolución circular discretas utilizando multiplicación matricial. Indique claramente la forma que tendría la correspondiente matriz de convolución en cada caso.
+
+\item  Exprese la sumatoria de convolución y explique las propiedades de los sistemas LTI que están implícitas en la misma. ¿Cuál es la importancia de la operación de convolución?
+
+\item Demuestre que la salida $y[n]$ de un sistema LTI, ante cualquier entrada, es la convolución lineal discreta entre la entrada $x[n]$ y la respuesta al impulso $h[n]$ del sistema. Identifique claramente los pasos en los que se aplican las propiedades de este tipo de sistemas.\\
+Obtenga la salida ante cualquier entrada, de un sistema lineal cuya respuesta varía en el tiempo de una forma conocida.
+
+\item Explique como utilizaría la Transformada Discreta de Fourier (TDF) para calcular la convolución lineal (discreta).
+\end{enumerate}
+
+\section{Espacios de Señales}
+
+\begin{enumerate}
+
+\item Defina y explique distancia euclidiana y muestre que cumple con las propiedades para ser una métrica.
+
+\item ¿Cuál es la relación de las normas p y las medidas físicas de acción, energía, potencia, raíz del valor cuadrático medio y amplitud?
+
+\item Defina distancia y norma, indicando similitudes y diferencias entre ambos conceptos.
+
+\item Enumere y defina las propiedades que debe cumplir una función para ser considerada una métrica.
+
+\item  ¿Cuál es la definición de la cuasi-norma denominada \textit{norma 0} y en qué tipo de aplicaciones se utiliza?
+
+\item Defina y explique espacio métrico de las señales de potencia media finita.
+
+\item El espacio de las \textit{señales continuas que tienen amplitud finita} se denota como $L_{\infty}(\mathbb{R})$. Identifique una expresión coloquial que pueda asociar al espacio denotado como $L_{2}(\mathbb{R})$. Defina matemáticamente los conjuntos de señales correspondientes y explique por qué constituyen espacios y de qué tipo.
+
+\item  Demuestre que la proyección ortogonal minimiza el error de una aproximación mediante la combinación lineal de un conjunto de vectores en $\mathbb{R}^{n}$.
+
+\item ¿Puede una base contener vectores l.i. pero no ortogonales? Si su respuesta es afirmativa indique qué inconvenientes tendría la base. Si su respuesta es negativa proponga dos contraejemplos.
+
+\end{enumerate}
+
+\section{Transformada Discreta de Fourier}
+
+\begin{enumerate}
+\item A partir de la señal $x(t)=2\sin(2\pi 12t)+\sin(2\pi 5t)$ se obtuvo la secuencia $x[n]$, de $2[seg.]$ de duración utilizando una frecuencia de muestreo $f_{m}=20 [Hz]$:
+	\begin{enumerate}
+	\item Indique cuál es la resolución frecuencial en la Transformada Discreta de 			Fourier (TDF) de $x[n]$.
+
+	\item Grafique la magnitud de la TDF de $x[n]$. Justifique su respuesta.
+	\end{enumerate}
+
+\item Proponga un ejemplo de una señal temporal analógica que ha sido mal muestreada (con alias) y grafique su espectro aproximado indicando claramente cómo se manifiesta el fenómeno en ambos dominios (temporal y frecuencial).
+
+\item Defina y explique la propiedad de desplazamiento frecuencial para la Transformada Discreta de Fourier (TDF).
+
+\item Indique cuáles son las diferencias entre la Transformada de Fourier de Tiempo Discreto (TFTD) y la Transformada Discreta de Fourier (TDF).
+
+\item Defina y ejemplifique dos propiedades de la TDF.
+
+\item Esquematize y explique el fenómeno de alias desde el punto de vista temporal y frecuencial utilizando como ejemplo una señal $x(t) = \cos(2\pi 11t)$ que ha sido muestreada a $10[Hz]$.
+
+\item Para una señal discreta $x[n]$ de 4 muestras, escriba la TDF en forma matricial, identifique los elementos de la matriz que toman valores iguales y explique como se relaciona esta propiedad con la Transformada Rápida de Fourier (TRF).
+
+\item ¿Cuáles son las diferencias entre la Transformada Discreta de Fourier (TDF) y la Serie de Fourier?
+
+\item ¿Qué tipo de distorsiones incorpora el uso de ventanas temporales rectangulares en el espectro de las señales resultantes? ¿Cómo puede minimizarse este efecto?
+
+\item Explique y esquematice el fenómeno de alias. ¿Por qué es importante el teorema de muestreo de Nyquist?
+
+\item Explique el principio de incertidumbre de Heisenberg.
+
+\item Defina la propiedad de convolución para las Transformadas Continua (TF) y Discreta de Fourier (TDF) y explique sus diferencias.
+
+\item Explique desde el punto de vista del espacio de señales la expresión del teorema  de Parseval aplicado a una secuencia $x[n]$, de $N$ muestras y su TDF $X[k]$.
+
+\item ¿Cuál es la propiedad fundamental de la TDF que permite que se cumpla el teorema de Parseval? ¿Se cumple una propiedad similar para todas las normas-$p$?
+
+\item A partir de la señal $x(t)=\sin(2\pi 100t)+2\sin(2\pi 50t)$ se obtuvo la secuencia $x[n]$ utilizando una frecuencia de muestreo $f_{m}=150[Hz]$ durante un segundo.·¿Cómo es el espectro de frecuencias de $x[n]$? Grafíquelo respetando las escalas adecuadas y justifique su respuesta.
+
+\item Se tiene una señal muestreada a una determinada frecuencia de muestreo $f_{m}$, durante un tiempo dado $T$. Explique lo que cambia en la resolución frecuencial y la frecuencia máxima al realizar los siguientes cambios:
+	\begin{enumerate}
+	\item Se cambia la frecuencia de muestreo a $2f_{m}$ manteniendo $T$.
+	\item Se mantiene $f_{m}$, se cambia el tiempo total a $2T$.
+	\end{enumerate}
+
+\item Considere la propiedad de convolución de la TDF. ¿Bajo qué condiciones se verifica esta propiedad?
+
+\item Suponga que $x[n]$ es una versión correctamente muestreada de una señal continua $x(t)$:
+	\begin{enumerate}
+	\item Explique la relación que existe entre la Transformada Discreta de Fourier 		(TDF) de $x[n]$ y la Transformada de Fourier de Tiempo Discreto (TFTD) de $x[n]$.
+	
+	\item Explique la relación que existe entre la TDF de $x[n]$ y la Transformada de 		Fourier (TF) de $x(t)$.
+	
+	\item Proponga un procedimiento para recuperar $x(t)$ a partir de $x[n]$. ¿Es 			físicamente realizable esta operación? Justifique.
+	\end{enumerate}
+
+\end{enumerate}
+
+\section{Transformada Z}
+
+\begin{enumerate}
+\item En un contexto de discretización de una señal continua $x(t)$, describa cuál es la relación entre la Transformada Z de $x[n]$ y la transformada de Laplace de $x(t)$.
+
+\item ¿Por qué resulta necesario utilizar transformaciones conformes aproximadas para obtener la función de transferencia de un sistema discreto a partir de la transferencia de uno continuo?
+
+\item Describa una de las transformaciones conformes mencionadas en el punto anterior, resaltando sus características principales y las consideraciones  prácticas a tener en cuenta para su empleo.
+
+\item A partir de la ecuación general que define el comportamiento temporal de los sistemas lineales e invariantes en el tiempo (LTI) discreto obtenga la expresión general para su correspondiente función de transferencia.\\
+Explique las diferencia para cada uno de los tres tipos de sistemas LTI discretos existentes.
+
+\item Demuestre que la trasformada Z, es equivalente a la transformada de Laplace de una secuencia discreta $x[n]$.
+
+\item ¿Cuál es el principal inconveniente que presenta la transformación bilineal para el mapeo entre los planos s y Z? Explique en forma gráfica cómo afecta la respuesta del sistema de tiempo discreto correspondiente.
+
+\item Grafique en los planos $s$ y $z$ los mapeos realizados por la transformación de Euler, la bilineal y la ideal. En cada caso indique claramente todas las referencias en los ejes coordenados en función de la frecuencia de muestreo.
+
+\item Explique los pasos para obtener la ecuación en diferencias de un sistema discreto a partir de la ecuación diferencial que define el sistema en tiempo continuo. ¿Qué propiedades de la Transformada Z deben aplicarse?
+
+\item ¿Cuáles son las condiciones para que la Transformada Z de una secuencia converja?
+
+\item Explique las principales desventajas de las transformaciones de Euler y Bilineal. Proponga además en cada caso un ejemplo donde se puedan apreciar las limitaciones de cada una.
+
+\item Explique la relación entre la Transformada de Fourier de una secuencia discreta y la Transformada Z.
+
+\item Se dispone de una señal $y(t)$ que se obtuvo como respuesta del sistema $H(s)=\frac{s+0.1}{(s+0.1)^{2}+16}$ a la entrada $x(t)=\sin(2\pi 10t)$. A partir de esta se obtuvo una señal $y[n]$ utilizando una frecuencia de muestreo $f_{m}=256[Hz]$ y $N=512$ muestras de duración. Además se sabe que el ancho de banda de $H(s)$ es de $20[Hz]$.\\
+Considerando lo mencionado anteriormente conteste las siguientes preguntas:
+	\begin{enumerate}
+	\item Si $Y[k]$ es la TDF de $y[n]$, grafique las componentes distintas de cero de 	$Y[k]$ indicando el valor de la muestra respectiva y a qué frecuencia corresponde.
+	\item ¿Cómo haría para obtener una estimación de las muestras intermedias de $y[n]		$ de tal manera que la longitud total sea de $4N$ muestras?
+	\item ¿Cómo obtendría la respuesta en frecuencia $|H(\exp^{-j\theta})|$ del 			sistema discreto? Describa y justifique cada paso en el proceso.
+	\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

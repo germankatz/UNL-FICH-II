@@ -1,0 +1,52 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Dise\IeC {\~n}o de filtros digitales}{3}
+\contentsline {subsection}{\numberline {1.1}\IeC {\textquestiondown }Qu\IeC {\'e} diferencias y similitudes existen entre los conceptos de sistema y filtro?}{3}
+\contentsline {subsection}{\numberline {1.2}Explique que es un filtro de compensaci\IeC {\'o}n de fase, un filtro de fase lineal y un filtro adaptativo.}{3}
+\contentsline {subsection}{\numberline {1.3}Ejemplifique dos casos de aplicaci\IeC {\'o}n donde se requiera la utilizaci\IeC {\'o}n de filtrado est\IeC {\'a}tico y adaptativo respectivamente. Justifique su respuesta.}{3}
+\contentsline {subsection}{\numberline {1.4}Liste las ventajas y desventajas de utilizar un filtro de Butterworth.}{4}
+\contentsline {subsection}{\numberline {1.5}Liste las ventajas y desventajas de utilizar un filtro de Chebyshev tipo II.}{4}
+\contentsline {subsection}{\numberline {1.6}Detalle los pasos para el dise\IeC {\~n}o de un filtro de Chebyshev tipo II a partir de su prototipo anal\IeC {\'o}gico.}{5}
+\contentsline {subsection}{\numberline {1.7}Describa sucintamente una t\IeC {\'e}cnica de dise\IeC {\~n}o de filtros IIR y una de filtros FIR.}{5}
+\contentsline {subsection}{\numberline {1.8}Ap\IeC {\'e}ndice}{6}
+\contentsline {subsubsection}{\numberline {1.8.1}Comparativa de filtros}{6}
+\contentsline {section}{\numberline {2}Identificaci\IeC {\'o}n de Sistemas}{6}
+\contentsline {subsection}{\numberline {2.1}Escriba una definici\IeC {\'o}n de identificaci\IeC {\'o}n de sistemas.}{6}
+\contentsline {subsection}{\numberline {2.2}\IeC {\textquestiondown }Cu\IeC {\'a}les son las limitaciones del m\IeC {\'e}todo de predicci\IeC {\'o}n lineal?}{6}
+\contentsline {subsection}{\numberline {2.3}Indique si las siguientes afirmaciones respecto a los m\IeC {\'e}todos de identificaci\IeC {\'o}n de sistemas basados en predicci\IeC {\'o}n lineal son correctas o no, justificando sus respuestas:}{6}
+\contentsline {subsubsection}{\numberline {2.3.1}No pueden utilizarse en sistemas con entradas aleatorias.}{6}
+\contentsline {subsubsection}{\numberline {2.3.2}Son los m\IeC {\'e}todos m\IeC {\'a}s sencillos para identificar un sistema lineal de orden peque\IeC {\~n}o.}{6}
+\contentsline {subsubsection}{\numberline {2.3.3}No sirven para encontrar los par\IeC {\'a}metros de un sistema ARMA.}{7}
+\contentsline {subsubsection}{\numberline {2.3.4}Pueden extenderse f\IeC {\'a}cilmente a los sistemas no lineales.}{7}
+\contentsline {subsection}{\numberline {2.4}Deduzca la ecuaci\IeC {\'o}n de Wiener-Hopf utilizada en el m\IeC {\'e}todo de predicci\IeC {\'o}n lineal para el caso de se\IeC {\~n}ales determin\IeC {\'\i }sticas.}{7}
+\contentsline {subsection}{\numberline {2.5}Deduzca la ecuaci\IeC {\'o}n para el c\IeC {\'a}lculo de la ganancia en el m\IeC {\'e}todo de predicci\IeC {\'o}n lineal.}{8}
+\contentsline {subsection}{\numberline {2.6}Describa los m\IeC {\'e}todos de estimaci\IeC {\'o}n de orden y liste sus ventajas relativas.}{9}
+\contentsline {section}{\numberline {3}Procesamiento de la Voz}{9}
+\contentsline {subsection}{\numberline {3.1}Describa y clasifique desde el punto de vista fenomenol\IeC {\'o}gico a la se\IeC {\~n}al producida a nivel de las cuerdas vocales. \IeC {\textquestiondown }Qu\IeC {\'e} caracter\IeC {\'\i }sticas posee su espectro? Grafique.}{9}
+\contentsline {subsection}{\numberline {3.2}La figura representa el modelo lineal de producci\IeC {\'o}n de la se\IeC {\~n}al de voz:}{10}
+\contentsline {subsubsection}{\numberline {3.2.1}\IeC {\textquestiondown }Qu\IeC {\'e} tipos de se\IeC {\~n}ales de excitaci\IeC {\'o}n se utilizan? \IeC {\textquestiondown }Qu\IeC {\'e} par\IeC {\'a}metros definen cada tipo de excitaci\IeC {\'o}n? \IeC {\textquestiondown }C\IeC {\'o}mo los estimar\IeC {\'\i }as?}{10}
+\contentsline {subsubsection}{\numberline {3.2.2}\IeC {\textquestiondown }Qu\IeC {\'e} modela el bloque denominado \textit {sistema} y de que tipo es? \IeC {\textquestiondown }Cu\IeC {\'a}ntos par\IeC {\'a}metros se necesitan definirlo? \IeC {\textquestiondown }C\IeC {\'o}mo se estiman estos par\IeC {\'a}metros?}{10}
+\contentsline {subsection}{\numberline {3.3}Proponga un m\IeC {\'e}todo para calcular la frecuencia fundamental ($F_{0}$) de un tramo de se\IeC {\~n}al de voz.}{11}
+\contentsline {subsection}{\numberline {3.4}\IeC {\textquestiondown }A que se denominan \textit {frecuencias formantes}? \IeC {\textquestiondown }C\IeC {\'o}mo se denotan y que importancia tienen en la generaci\IeC {\'o}n de la voz?}{11}
+\contentsline {subsection}{\numberline {3.5}\IeC {\textquestiondown }Qu\IeC {\'e} es la escala de mel y c\IeC {\'o}mo se utiliza para el an\IeC {\'a}lisis de voz?}{11}
+\contentsline {subsection}{\numberline {3.6}Describa las hip\IeC {\'o}tesis en las que se basa el an\IeC {\'a}lisis cepstral del habla para separar la se\IeC {\~n}al de excitaci\IeC {\'o}n, de la respuesta del tracto vocal \IeC {\textquestiondown }Son realistas estas hip\IeC {\'o}tesis?}{11}
+\contentsline {subsection}{\numberline {3.7}Considere la gr\IeC {\'a}fica de una vocal sostenida $x[n]$ que se muestra en la Figura 1.(a). Indique, dibujando sobre la misma, un Per\IeC {\'\i }odo Fundamental ($T_{0}$) y estime (aproximadamente) su duraci\IeC {\'o}n. La frecuencia de muestreo es de 8 kHz:}{12}
+\contentsline {subsubsection}{\numberline {3.7.1}Defina el \textit {cepstrum real} $c[n]$.}{12}
+\contentsline {subsubsection}{\numberline {3.7.2}A partir de la Figura 1.(b), correspondiente al \textit {cepstrum real} del segmento de vocal mostrado en la Figura 1.(a), indique c\IeC {\'o}mo estimar la Frecuencia Fundamental ($F_{0}$) del segmento y compare con el resultado obtenido en el punto anterior.}{12}
+\contentsline {subsection}{\numberline {3.8}Proponga un m\IeC {\'e}todo para contar la cantidad de cruces por cero de un tramo de se\IeC {\~n}al de voz. \IeC {\textquestiondown }C\IeC {\'o}mo har\IeC {\'\i }a para que el m\IeC {\'e}todo fuera robusto al ruido?}{12}
+\contentsline {subsection}{\numberline {3.9}Indique las consideraciones especiales que deben tenerse en cuenta al aplicar el m\IeC {\'e}todo de predicci\IeC {\'o}n lineal a se\IeC {\~n}ales de voz. \IeC {\textquestiondown }En qu\IeC {\'e} casos aplicar\IeC {\'\i }a el m\IeC {\'e}todo adaptativo de Widrow?}{13}
+\contentsline {section}{\numberline {4}An\IeC {\'a}lisis Tiempo-Frecuencia}{13}
+\contentsline {subsection}{\numberline {4.1}Explique la necesidad de utilizar transformaciones tiempo-frecuencia.}{13}
+\contentsline {subsection}{\numberline {4.2}Defina la \textit {Transformada de Fourier de Corta Duraci\IeC {\'o}n} (STFT), en sus versiones continua y discreta.}{13}
+\contentsline {subsection}{\numberline {4.3}Explique al menos dos maneras de interpretar conceptualmente a la STFT. Utilice gr\IeC {\'a}ficos detallando las magnitudes y unidades de los ejes.}{14}
+\contentsline {subsection}{\numberline {4.4}Explique en que consiste el \textit {principio de incertidumbre} y como se expresa anal\IeC {\'\i }ticamente.}{14}
+\contentsline {subsection}{\numberline {4.5}\IeC {\textquestiondown }Es posible interpretar la STFT en t\IeC {\'e}rminos de una \textit {base}? En caso afirmativo ejemplifique graficando algunos elementos de la misma.}{15}
+\contentsline {subsection}{\numberline {4.6}Describa el algoritmo r\IeC {\'a}pido para el c\IeC {\'a}lculo de la Transformada Ondita Di\IeC {\'a}dica.}{15}
+\contentsline {subsection}{\numberline {4.7}Defina la \textit {Distribuci\IeC {\'o}n de Wigner-Ville} en su versi\IeC {\'o}n continua. Resuma ventajas y desventajas.}{15}
+\contentsline {subsection}{\numberline {4.8}Esquematice y compare las particiones del plano tiempo-frecuencia que se obtienen mediante una representaci\IeC {\'o}n que utilice una base de \textit {deltas de Dirac}, la base de la \textit {Transformada Discreta de Fourier}, la \textit {Transformada de Fourier de Corta Duraci\IeC {\'o}n} y la \textit {Transformada Onditas Discreta Di\IeC {\'a}dica}.}{16}
+\contentsline {section}{\numberline {5}Problemas}{17}
+\contentsline {subsection}{\numberline {5.1}Problema 1}{17}
+\contentsline {subsection}{\numberline {5.2}Problema 2}{18}
+\contentsline {subsection}{\numberline {5.3}Problema 3}{18}
+\contentsline {subsection}{\numberline {5.4}Problema 4}{18}
+\contentsline {subsection}{\numberline {5.5}Problema 5}{19}
+\contentsline {subsection}{\numberline {5.6}Problema 6}{19}

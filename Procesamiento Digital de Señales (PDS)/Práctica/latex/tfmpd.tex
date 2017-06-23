@@ -1,0 +1,208 @@
+\documentclass[conference,a4paper,10pt,oneside,final]{tfmpd}
+\usepackage[latin1]{inputenc}   % caracteres especiales (acentos, e�es)
+\usepackage[spanish]{babel}     % varias definiciones para el espa�ol
+\usepackage{graphicx}           % inserci�n de graficos
+
+\begin{document}
+
+\title{Instrucciones para el autor: trabajo final de muestreo y procesamiento digital}
+
+\author{Nombre A. Apellido,
+        Nombre B. Apellido y 
+        Nombre C. Apellido \\
+\textit{Trabajo pr�ctico final de ``Muestreo y procesamiento digital'', II-FICH-UNL.}}
+
+\markboth{MUESTREO Y PROCESAMIENTO DIGITAL: TRABAJO FINAL}{}
+
+\maketitle
+
+\begin{abstract}
+Este documento es una gu�a para la preparaci�n de art�culos a ser presentados en la simulaci�n de Congreso, como trabajo final de la materia. Se recomienda que este resumen contenga entre 150 y 200 palabras. Brevemente resuma el contexto y motivaci�n, el o los aportes m�s originales, los resultados y las conclusiones de su trabajo. No haga citas bibliogr�ficas y preferentemente tampoco introduzca acr�nimos ni f�rmulas en el resumen o en el t�tulo. Considere que este mismo resumen deber� ser presentado en formato de texto puro para su inclusi�n en las memorias del congreso. Como 
+recomendaci�n general, escriba su art�culo insertando y eliminado texto a partir de este documento. De esta forma le ser� m�s f�cil respetar los estilos predefinidos. No defina nuevos estilos y cuando pegue texto de otros documentos h�galo utilizando el pegado especial ``texto sin formato'' y asegur�ndose de aplicar luego el estilo correspondiente. Utilice las separaciones de texto tal como est�n definidas en cada estilo.
+\end{abstract}
+
+\begin{keywords}
+entre 3 y 5 t�rminos separados por coma. Elija aquellos que considere claves para identificar la 
+tem�tica de su trabajo y no repitan todo el t�tulo.
+\end{keywords}
+
+\section{Introducci�n}
+
+\PARstart{E}{l} formato sobre el que se bas� este documento es el utilizado por el IEEE para la mayor�a de sus publicaciones y conferencias. Sin embargo, se han realizado algunos peque�os cambios, como por ejemplo, en el presente estilo se utiliza formato A4 en lugar de carta y los m�rgenes se han fijado en 2 cm a la izquierda y arriba, y 1,5 cm a la derecha y abajo. A partir de estas definiciones se ha fijado el ancho de columna en 8,5 cm, con un espacio de 0,5 cm entre ellas. Se ha dejado un encabezado de p�gina indicando el c�digo del art�culo y el n�mero de p�gina y ning�n tipo de pi� de p�gina. Para los usuarios de \LaTeX\ se recomienda utilizar el formato tfmpd.cls, que es una adaptaci�n al espa�ol del formato IEEETran.cls.
+
+Las definiciones elementales de estilo son: fuente Times o Times New Roman para todas las partes del documento, tama�o 24 pt para el t�tulo, 11 pt para los datos de los autores, cursiva para la l�nea de la instituci�n a la que pertenece el primer autor y su correo electr�nico, 9 pt en negritas para el resumen y palabras clave, 10 pt para el texto normal, ecuaciones y t�tulos de secci�n, versales y centrado para el t�tulo de nivel 1, it�lica para los t�tulos de nivel 2 y 3, 8 pt para los ep�grafes de las figuras, tablas y referencias, versales para el ep�grafe de tablas. Utilice cursivas para destacar un t�rmino (no subrayado). A pesar de todos estos detalles y cuantos otros que se podr�an dar, se recomienda nuevamente escribir su art�culo copiando, pegando y reemplazando texto a partir de este mismo documento. Esta es la forma m�s f�cil y segura de respetar los estilos definidos.
+
+La extensi�n de cada trabajo no podr� exceder \textit{estrictamente} las 4 p�ginas y se recomienda que tampoco posea menos de 3 p�ginas. Por favor, no cambie la tipograf�a, ni los espacios entre el texto, ni otras medidas definidas en los estilos para ajustarse a esta norma. En esta oportunidad se solicita a los autores que para la revisi�n inicial presente el trabajo completo (3 o 4 p�ginas) en el formato final pero sin los datos de autor y por separado un archivo de texto con el t�tulo, los datos de los autores, el resumen y las palabras clave.
+
+La estructura general que se espera para este art�culo abarca generalmente secciones como: introducci�n, materiales, m�todos, resultados, discusi�n, conclusiones, trabajos futuros, agradecimientos y referencias. Estos t�tulos pueden combinarse de a dos en una misma secci�n y los t�tulos trabajos futuros y agradecimientos son totalmente optativos. Es com�n que la secci�n de m�todos lleve otro t�tulo m�s relacionado con el aporte original del art�culo, pero las restantes secciones se presentan con los t�tulos antes listados. Si existieran demostraciones u otros desarrollos matem�ticos extensos, se recomienda agruparlos en ap�ndices antes de las referencias bibliogr�ficas.
+
+A continuaci�n se dar�n m�s detalles acerca de las secciones del documento y los formatos para insertar los distintos tipos de objetos, como ecuaciones, figuras, etc.
+
+\section{Formato para los objetos insertados}
+
+Observe que el t�tulo de cada secci�n ya incluye la numeraci�n autom�tica y el espacio hacia el �ltimo p�rrafo de la 
+secci�n anterior. Por lo tanto, para iniciar una nueva secci�n se recomienda comenzar copiando y pegando el t�tulo desde otra secci�n en este mismo documento. De forma similar, tambi�n se puede observar que el formato para los p�rrafos ya incluye una peque�a indentaci�n autom�tica en la primera l�nea y no existe un espacio extra para la 
+separaci�n entre p�rrafos.
+
+\subsection{Las ecuaciones}
+Las ecuaciones menores o definiciones de variables pueden insertarse directamente en la l�nea del p�rrafo, por ejemplo, consid�rese que se desea definir una historia ${\rm {\bf h}}_i^n = w_{i - 1} ,w_{i - 2}, \ldots,w_{i - n + 1} $ asociada un s�mbolo $w_i $. Observe que una manera sencilla de asegurar la uniformidad en el estilo de las ecuaciones es insertar siempre una ecuaci�n a�n cuando se podr�a escribir directamente como texto y aplicar formato en cursiva o negrita.
+
+Para insertar ecuaciones m�s complejas se recomienda utilizar un formato de p�rrafo aparte, con el estilo correspondiente:
+
+\begin{equation}
+\label{eq1}
+\hat {P}_I (w_i \vert {\rm {\bf h}}_i^k ) = \sum\limits_{j=0}^{k-1} 
+{\lambda _j \hat {P}(w_i \vert {\rm {\bf h}}_i^j )} 
+\end{equation}
+
+En este estilo de ecuaci�n se ha fijado dos tabulaciones, la primera centra la ecuaci�n en la columna y la segunda justifica a la derecha el n�mero de la ecuaci�n. Para hacer referencia a esta ecuaci�n desde el texto se menciona, por ejemplo, en (\ref{eq1}) se puede ver la estimaci�n de la probabilidad de una historia a partir de la simple combinaci�n lineal de historias de orden inferior.
+
+\subsection{Las figuras}
+
+Cuando inserte figuras no las deje como objetos flotantes sobre el texto y no incluya dentro de ellas al ep�grafe. El ep�grafe se coloca abajo de las figuras y posee un estilo propio que b�sicamente consiste en fuente de 8 pt con p�rrafo justificado cuando se trate de m�s de una l�nea y centrado para una �nica l�nea de texto (ver Fig. 1). Si en la figura utiliza ejes cartesianos, recuerde siempre indicar en la misma a que corresponde cada eje (etiquetas). Para hacer referencia a una figura se debe utilizar la forma abreviada Fig. seguida del n�mero de la figura, salvo cuando est� al comienzo del p�rrafo, caso en que se deber� utilizar la palabra completa.
+
+En la Fig. 2 se puede ver otro tipo de figura donde se destacan cuatro curvas. No incluya colores en las gr�ficas, preferentemente utilice distintos tipos de l�neas. Los gr�ficos vectorizados brindan una mejor calidad electr�nica y de impresi�n. Por lo tanto, inserte todas las gr�ficas con alg�n formato vectorizado (Corel, Visio, XFig, PostScript, Metarchivo mejorado, etc) o bien, si se tratase de una fotograf�a o imagen m�s compleja utilice formatos raster sin 
+compresi�n (por ejemplo BMP) o con compresi�n sin p�rdida de informaci�n (se pueden configurar los formatos JPG, PNG, TIF, GIF, etc).
+
+En general, se recomienda que las figuras est�n al principio o al pie de una columna. Se debe cuidar que el tama�o del texto dentro de las figuras no sea menor a 7 pt.
+
+\subsection{Las tablas}
+
+Es preferible que las tablas se dise�en a partir del mismo editor de textos pero tambi�n pueden consistir en una gr�fica en alg�n formato vectorizado. El ep�grafe de las tablas es marcadamente diferente del de las figuras: se coloca por arriba de la tabla, con fuente de tama�o 8 pt en versales y p�rrafo centrado.
+
+\begin{figure}[tbhp]
+\centerline{\includegraphics{sgram}}
+\caption{Red para una gram�tica est�ndar. }
+\label{fig1}
+\end{figure}
+
+\begin{figure}[tbhp]
+\centerline{\includegraphics[scale=0.75]{gammas}}
+\caption{Influencia de las constantes de penalizaci�n $\gamma$.}
+\label{fig2}
+\end{figure}
+
+Al igual que en las figuras, es preferible que las tablas se encuentren al principio o al pie de una columna. El tama�o del texto dentro de las tablas no deber�a ser inferior a 7 pt ni mayor a 10 pt.
+
+Un ejemplo de este estilo puede verse a continuaci�n en la Tabla I.
+
+\begin{table}[htbp]
+\caption{Resultados finales y reducci�n relativa de los errores (promedios sobre 10 
+particiones de entrenamiento y prueba).}
+\begin{center}
+\begin{tabular}{l|c|c|c|c}
+\hline
+Errores de     & SER    & WER  & WAER & Reducci�n \\
+reconocimiento & {\%}   & {\%} & {\%} & {\%}WER   \\
+\hline
+Referencia& 38.30& 7.54& 8.53&    -- \\
+HMM-PASS  & 30.55& 5.36& 6.67& 28.91 \\
+T-PASS    & 25.50& 4.76& 5.70& 36.87 \\
+\hline
+\end{tabular}
+\end{center}
+\label{tab1}
+\end{table}
+
+\subsection{Las citas bibliogr�ficas}
+
+Las citas bibliogr�ficas se realizan entre corchetes, por ejemplo [1]. Cuando se hacen citas m�ltiples utilice la coma para dos citas [2], [3] o bien la notaci�n de rangos de citas [2]-[5]. No utilice t�rminos particulares antes de la cita, como en la ``referencia [2]'' o en ``Ref. [4]''. El estilo general para las referencias bibliogr�ficas se muestra con varios ejemplos en la secci�n correspondiente al final de este documento. Observe estrictamente el estilo propuesto: la utilizaci�n de tipograf�a, las may�sculas, la forma de nombrar a los autores, los datos requeridos para libros, revistas y congresos, etc.
+
+La secci�n de referencias posee un estilo particular para el p�rrafo y la numeraci�n. �stas se deben presentar preferentemente por orden de aparici�n en el texto pero tambi�n se aceptar�n por orden alfab�tico del apellido del primer autor.
+
+\subsection{Otras recomendaciones generales}
+
+Defina adecuadamente cada uno de los acr�nimos la primera vez que aparece en el texto (salvo en el resumen), por ejemplo, relaci�n de grandes masas (RGM). Luego utilice siempre el acr�nimo en lugar del t�rmino completo.
+
+Recuerde definir cada uno de los s�mbolos que aparecen en las ecuaciones y aclarar la notaci�n cuando se utilizan operadores matem�ticos especiales o poco comunes.
+
+Observe la utilizaci�n de may�sculas, como regla general se coloca may�scula en la primer letra de la primer palabra de cada frase y los nombres propios, tanto en los t�tulos como en el texto en general.
+
+\section{Formato electr�nico de env�o}
+
+Hasta la fecha indicada en el sitio web del congreso se recibir�n: el art�culo completo de 4 p�ginas en formato PDF y el t�tulo, resumen, palabras clave y datos de los autores en formato de texto ASCII puro.
+
+Dado que el proceso de revisi�n se realizar� por el sistema de doble ciego, solicitamos que \textit{no} se incluyan los nombres y datos de autores en el art�culo completo enviado para la revisi�n. En lugar de estos datos deje simplemente las leyendas bajo el t�tulo tal como figuran en este ejemplo. Estos datos deber�n incluirse en el archivo de texto y en la versi�n final de documento completo (ya revisado, aprobado y listo para imprimir).
+
+A continuaci�n se detalla como generar cada uno de estos archivos.
+
+\subsection{Art�culo completo para la revisi�n}
+
+El formato en que se reciben los art�culos completos es PDF hasta la versi�n 1.4. Para los usuarios de \LaTeX\ se recomienda utilizar directamente el programa pdflatex. Si no contara con este programa en alguna distribuci�n de \LaTeX, tambi�n es posible utilizar la secuencia latex, dvips y ps2pdf.
+
+Para los usuarios de Word que no conozcan un m�todo para convertir sus documentos a PDF, le damos a continuaci�n una serie de instrucciones que le facilitar�n esta tarea.
+
+En primer lugar deber� descargar e instalar los siguientes programas 
+gratuitos (en este mismo orden):
+
+\begin{enumerate}
+\item Impresora PostScript\footnote{http://www.adobe.com/products/printerdrivers/main.html}:
+se instala como una impresora y le permitir� imprimir el documento en formato PS. Durante la instalaci�n elija FILE como puerto para la impresora.
+
+\item Int�rprete PostScript\footnote{http://www.cs.wisc.edu/~ghost/doc/AFPL/get704.htm}:
+recomendamos en este caso el int�rprete GhostScript, que se ecuentra disponible gratuitamente para diferentes sistemas operativos.
+
+\item Visualizador PostScript\footnote{http://www.cs.wisc.edu/~ghost/gsview/}:
+GSView utiliza al int�rprete anterior para previsualizar archivos PS y para convertirlos en PDF.
+\end{enumerate}
+
+Para la conversi�n PDF se utiliza el formato intermedio PS. En primer logar se imprime el documento en la impresora PostScript. El archivo quedar� con extensi�n .prn y es necesario cambiarla manualmente a .ps. Una vez obtenido el archivo PS se debe abrir con GSView y seleccionar la opci�n para ``convertir... '' del men� de archivos. Mediante 
+la opci�n pdfwrite y utilizando la m�xima resoluci�n disponible, podr� convertir finalmente todas las p�ginas de su PS a PDF.
+
+\subsection{Resumen y datos de autores en texto ASCII}
+
+En un archivo de texto est�ndar (.txt) y sin caracteres ni formatos especiales se deben incluir los siguientes datos en castellano y en ingl�s:
+
+- T�tulo del trabajo
+
+- Nombre completo del 1er autor
+
+- Instituci�n a la que pertenece el 1er autor
+
+- Datos del 1er autor (direcci�n, TE/FAX, email, etc)
+
+- Nombre completo y datos de los coautores
+
+- Resumen (el mismo del art�culo completo)
+
+- Palabras clave
+
+\subsection{Versi�n final del art�culo}
+
+Una vez aprobado para la publicaci�n e implementadas las correcciones sugeridas por los revisores, se deber� enviar el art�culo final en formato PDF. Este archivo deber� tener como nombre el mismo c�digo entregado durante la revisi�n (COD-PAIS\_NRO) y .pdf como extensi�n.
+
+La versi�n final deber� incluir, debajo del t�tulo, los nombres de los autores y la informaci�n de la instituci�n a la que pertenecen (tal como se indica en este ejemplo).
+
+\section{Conclusiones}
+
+En las conclusiones deber�a presentarse una revisi�n de los puntos clave del art�culo con especial �nfasis en el an�lisis y discusi�n de los resultados que se realiz� en las secciones anteriores y en las aplicaciones o ampliaciones de �stos. No deber�a reproducirse el resumen en esta secci�n.
+
+Incluya en esta secci�n y en la secci�n de discusi�n sus propias cr�ticas y conclusiones sobre el trabajo.
+
+Si se trata de un an�lisis cr�tico de una publicaci�n cient�fica, no olvide citar el art�culo original en el que se baso tu trabajo.
+
+\section{Ap�ndices}
+
+En algunas situaciones conviene incluir una secci�n de ap�ndices con sus correspondientes subsecciones.
+
+\subsection{Demostraciones}
+
+Cuando la extensi�n y complejidad de las demostraciones lo justifique en pos de no distraer al lector presentando en el texto solamente los resultados finales.
+
+\subsection{Algoritmos}
+
+Cuando sus extensiones lo justifiquen y no sean parte central del trabajo.
+
+\subsection{Detalles t�cnicos}
+
+Tablas con datos t�cnicos o mediciones accesorias que se utilizaron en el trabajo.
+
+\section*{Agradecimientos}
+
+Si los hubiere, a quienes corresponda.
+
+\nocite{*}
+\bibliographystyle{tfmpd}
+\bibliography{tfmpd}
+
+\end{document}

@@ -1,0 +1,15 @@
+\BOOKMARK [2][]{Outline0.1}{Dise\361o de filtros digitales}{}% 1
+\BOOKMARK [3][]{Outline0.1.1.9}{Ejemplifique dos casos de aplicaci\363n donde se requiera la utilizaci\363n de filtrado est\341tico y adaptativo respectivamente. Justifique su respuesta.}{Outline0.1}% 2
+\BOOKMARK [3][]{Outline0.1.2.11}{Liste las ventajas y desventajas de utilizar un filtro de Chebyshev tipo II.}{Outline0.1}% 3
+\BOOKMARK [3][]{Outline0.1.3.12}{Detalle los pasos para el dise\361o de un filtro de Chebyshev tipo II a partir de su prototipo anal\363gico.}{Outline0.1}% 4
+\BOOKMARK [3][]{Outline0.1.4.12}{\277Qu\351 diferencias y similitudes existen entre los conceptos de sistema y filtro?}{Outline0.1}% 5
+\BOOKMARK [3][]{Outline0.1.5.13}{Describa sucintamente una t\351cnica de dise\361o de filtros IIR y una de filtros FIR.}{Outline0.1}% 6
+\BOOKMARK [3][]{Outline0.1.6.15}{Liste las ventajas y desventajas de utilizar un filtro de Butterworth.}{Outline0.1}% 7
+\BOOKMARK [3][]{Outline0.1.7.15}{Explique que es un filtro de compensaci\363n de fase, un filtro de fase lineal y un filtro adaptativo.}{Outline0.1}% 8
+\BOOKMARK [2][]{Outline0.2}{Identificaci\363n de Sistemas}{}% 9
+\BOOKMARK [3][]{Outline0.2.1.16}{Deduzca la ecuaci\363n de Wiener-Hopf utilizada en el m\351todo de predicci\363n lineal para el caso de se\361ales determin\355sticas.}{Outline0.2}% 10
+\BOOKMARK [3][]{Outline0.2.2.17}{Describa los m\351todos de estimaci\363n de orden y liste sus ventajas relativas.}{Outline0.2}% 11
+\BOOKMARK [3][]{Outline0.2.3.19}{\277Cu\341les son las limitaciones del m\351todo de predicci\363n lineal?}{Outline0.2}% 12
+\BOOKMARK [3][]{Outline0.2.4.20}{Deduzca la ecuaci\363n para el c\341lculo de la ganancia en el m\351todo de predicci\363n lineal.}{Outline0.2}% 13
+\BOOKMARK [3][]{Outline0.2.5.21}{Indique si las siguientes afirmaciones respecto a los m\351todos de identificaci\363n de sistemas basados en predicci\363n lineal son correctas o no, justificando sus respuestas:}{Outline0.2}% 14
+\BOOKMARK [3][]{Outline0.2.6.23}{Escriba una definici\363n de identificaci\363n de sistemas.}{Outline0.2}% 15
