@@ -1,0 +1,9 @@
+Clases y jerarquía
+Animal (herbivore(giraffe),carnivore(lion))
+Plant (tasty-plant,tree(blanch(leaf)))
+
+Relaciones / propiedades
+"#is-part-of", "#eats", "#eaten-by"
+
+Restricciones:
+owl:allValuesFrom, owl:someValuesFrom

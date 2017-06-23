@@ -1,0 +1,825 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml">
+  <owl:Ontology rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml"/>
+  <owl:Class rdf:ID="Senior_lecturer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Academic_rank"/>
+    </rdfs:subClassOf>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Senior_lecturer</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Course">
+    <rdfs:label>Course</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Teaching_unit"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Teaching_unit">
+    <rdfs:label>Teaching_unit</rdfs:label>
+    <rdfs:comment>Modules, courses, etc.
+</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Academic_staff"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isTaughtBy"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Long_thin_format">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Module_format"/>
+    </rdfs:subClassOf>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Long_thin_format</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Short_fat_format"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="White_ethnicity">
+    <rdfs:label>White_ethnicity</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Ethnicity_Value_Type"/>
+    </rdfs:subClassOf>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Modules_with_exams">
+    <rdfs:label>Modules_with_exams</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Module"/>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Exam"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:TransitiveProperty rdf:ID="has_part"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Functional_roles">
+    <rdfs:label>Functional_roles</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Module_format">
+    <rdfs:label>Module_format</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Pattern"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="female">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Sex_Value_Type"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="male"/>
+    </owl:disjointWith>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>female</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Short_fat_format">
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Short_fat_format</rdfs:label>
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Module_format"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Black_woman_professor">
+    <rdfs:comment></rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Person"/>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Professor_rank"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="has_academic_rank"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#female"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="has_sex"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="has_admin_ethnicity"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Black_ethnicity"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label>Black_woman_professor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Lecturer">
+    <rdfs:label>Lecturer</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="derisory_salary_range"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasSalaryRange"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_academic_rank"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Lecturer_rank"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#male">
+    <rdfs:label>male</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Sex_Value_Type"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Woman">
+    <rdfs:comment></rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#female"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_sex"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label>Woman</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Academic_staff">
+    <rdfs:comment>Professors, lecturers, etc.  Those empowered to teach courses
+</rdfs:comment>
+    <rdfs:label>Academic_staff</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_academic_rank"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Academic_rank"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Non_white_ethnicity">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Ethnicity_Value_Type"/>
+          <owl:Class>
+            <owl:complementOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#White_ethnicity"/>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Non_white_ethnicity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Lab">
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Lab</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Teaching_activity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Student">
+    <rdfs:comment></rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="attends"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Academic_institution"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label>Student</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Lecture">
+    <rdfs:label>Lecture</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Teaching_activity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Professor">
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Professor</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_academic_rank"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Professor_rank"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Probe_poorly_paid">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class>
+            <owl:complementOf>
+              <owl:Class rdf:ID="acceptable_salary_range"/>
+            </owl:complementOf>
+          </owl:Class>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#hasSalaryRange"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Probe_poorly_paid</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Sex_Value_Type">
+    <rdfs:label>Sex_Value_Type</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ValuePartition"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#female"/>
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#male"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Third_year_module">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:TransitiveProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_part"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Exam"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:TransitiveProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_part"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Lecture"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Third_year_module</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="hasFormat"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Long_thin_format"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Module"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Teaching_activity">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Academic_staff"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isGivenBy"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Teaching_activity</rdfs:label>
+    <rdfs:comment>Lectures, exams, labs, etc.  The events in a course or module</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:TransitiveProperty rdf:ID="is_part_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Teaching_unit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Adult_age_group_simple">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Age_group_simple_VT"/>
+    </rdfs:subClassOf>
+    <rdfs:comment></rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="child_age_group_simple"/>
+    </owl:disjointWith>
+    <rdfs:label>Adult_age_group_simple</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#acceptable_salary_range">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SalaryRangeValueType"/>
+    </rdfs:subClassOf>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>acceptable_salary_range</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Exam">
+    <rdfs:comment></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Teaching_activity"/>
+    <rdfs:label>Exam</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Academic_rank">
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Functional_roles"/>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Academic_rank</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Man">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_sex"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#male"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Man</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Academic_institution">
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Academic_institution</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Black_professor">
+    <rdfs:label>Black_professor</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Professor"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_academic_rank"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_admin_ethnicity"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Black_ethnicity"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#SalaryRangeValueType">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#derisory_salary_range"/>
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#acceptable_salary_range"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:label>SalaryRangeValueType</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#ValuePartition"/>
+    </rdfs:subClassOf>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person">
+    <rdfs:label>Person</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Professor_rank">
+    <rdfs:comment></rdfs:comment>
+    <owl:disjointWith rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Senior_lecturer"/>
+    <rdfs:label>Professor_rank</rdfs:label>
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Academic_rank"/>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#derisory_salary_range">
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#SalaryRangeValueType"/>
+    <rdfs:comment></rdfs:comment>
+    <owl:disjointWith rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#acceptable_salary_range"/>
+    <rdfs:label>derisory_salary_range</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#ValuePartition">
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>ValueType</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Module">
+    <rdfs:label>Module</rdfs:label>
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Teaching_unit"/>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Pattern">
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Pattern</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Modules_with_labs">
+    <rdfs:label>Modules_with_labs</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Module"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Lab"/>
+            <owl:onProperty>
+              <owl:TransitiveProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_part"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#child_age_group_simple">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Age_group_simple_VT"/>
+    </rdfs:subClassOf>
+    <rdfs:label>child_age_group_simple</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Woman_professor">
+    <rdfs:label>Woman_professor</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Professor_rank"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_academic_rank"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#female"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_sex"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ACS_module">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Short_fat_format"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#hasFormat"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:TransitiveProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_part"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Lab"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>ACS_module</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:TransitiveProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_part"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Exam"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Module"/>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Modules_with_lectures">
+    <rdfs:label>Modules_with_lectures</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Module"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:TransitiveProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_part"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Lecture"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Black_person">
+    <rdfs:comment></rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_admin_ethnicity"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Black_ethnicity"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label>Black_person</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Caucasian_person">
+    <rdfs:comment></rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_admin_ethnicity"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#White_ethnicity"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label>Caucasian_person</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Lecturer_rank">
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Academic_rank"/>
+    <owl:disjointWith rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Senior_lecturer"/>
+    <rdfs:comment></rdfs:comment>
+    <owl:disjointWith rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Professor_rank"/>
+    <rdfs:label>Lecturer_rank</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Long_thin_module">
+    <rdfs:comment></rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Module"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Long_thin_format"/>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#hasFormat"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label>Long_thin_module</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Child">
+    <rdfs:label>Child</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="has_age_group_simple"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#child_age_group_simple"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Age_group_simple_VT">
+    <rdfs:label>Age_group_simple_VT</rdfs:label>
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#ValuePartition"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Adult_age_group_simple"/>
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#child_age_group_simple"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Short_fat_module">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Module"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#hasFormat"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Short_fat_format"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Short_fat_module</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Ethnicity_Value_Type">
+    <rdfs:label>Ethnicity_Value_Type</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#ValuePartition"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Male_professor">
+    <rdfs:label>Male_professor</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Professor"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_academic_rank"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_sex"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#male"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Adult">
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Adult</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Person"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Adult_age_group_simple"/>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_age_group_simple"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Black_ethnicity">
+    <rdfs:subClassOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Non_white_ethnicity"/>
+    <rdfs:label>Black_ethnicity</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_academic_rank">
+    <rdfs:label>has_academic_rank</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="RV_property"/>
+    </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="gives">
+    <rdfs:label>gives</rdfs:label>
+    <rdfs:comment>he relation of those responsible for a teaching unit to that unit
+</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#isGivenBy">
+    <rdfs:label>isGivenBy</rdfs:label>
+    <rdfs:comment>The relation of those responsible for a teaching unit to that unit
+</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#RV_property">
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>RV_property</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#hasSalaryRange">
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>hasSalaryRange</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#isTaughtBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="teaches"/>
+    </owl:inverseOf>
+    <rdfs:label>isTaughtBy</rdfs:label>
+    <rdfs:comment>The relation of actually teaching a teaching activity - includes lab supervising etc.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_sex">
+    <rdfs:subPropertyOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#RV_property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label>has_sex</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#attends">
+    <rdfs:label>attends</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#teaches">
+    <rdfs:label>teaches</rdfs:label>
+    <rdfs:comment>The relation of actually teaching a teaching activity - includes lab supervising etc.</rdfs:comment>
+    <owl:inverseOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#isTaughtBy"/>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_part">
+    <owl:inverseOf>
+      <owl:TransitiveProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#is_part_of"/>
+    </owl:inverseOf>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Teaching_activity"/>
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Teaching_unit"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Teaching_activity"/>
+          <owl:Class rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#Teaching_unit"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The relation between formal things such as teaching modules and the activities and other things that make them up
+
+One might argue if this is really partonomy, but for now the principles are the same </rdfs:comment>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#is_part_of">
+    <owl:inverseOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_part"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>The relation between formal things such as teaching modules and the activities and other things that make them up</rdfs:comment>
+  </owl:TransitiveProperty>
+  <owl:FunctionalProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#hasFormat">
+    <rdfs:label>hasFormat</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment></rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_admin_ethnicity">
+    <rdfs:label>has_admin_ethnicity</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#RV_property"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#has_age_group_simple">
+    <rdfs:subPropertyOf rdf:resource="file:/C:/Program%20Files/oiled-3-5-5/ontologies/Lecture-ontologies/Teaching-1-01.daml#RV_property"/>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>has_age_group_simple</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 1.3, Build 98)  http://protege.stanford.edu -->

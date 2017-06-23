@@ -1,0 +1,904 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Produce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Produce">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esProducidoPor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Productor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#actuaEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#actuaEn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esActuadoPor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#clasificadoComo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#clasificadoComo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#incluye"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#conformadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#conformadoPor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#contenidoEn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#consume -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#consume">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esConsumidoPor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#contenidoEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#contenidoEn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#correspondeA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#correspondeA">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#posee"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Perfil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#dirige -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#dirige">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esDirigidoPor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Director"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esActuadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esActuadoPor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esConsumidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esConsumidoPor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esDirigidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esDirigidoPor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Director"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esProducidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esProducidoPor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Productor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esPropiedadDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esPropiedadDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esPropiedadDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esPropietarioDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esPropietarioDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esSugerido -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esSugerido">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#estaSuscriptoA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#estaSuscriptoA">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#otorgaServicioA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#implementa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#implementa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Algoritmo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#incluye -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#incluye">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#otorgaServicioA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#otorgaServicioA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#posee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#posee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Perfil"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#recopila -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#recopila">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Perfil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Historial_de_busqueda"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#utiliza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#utiliza">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Navegador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#utilizadoEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#utilizadoEn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Dispositivo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Accion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Accion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Animada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Animada">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Apellido -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Apellido">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Director"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Navegador"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Productor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#CienciaFiccion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#CienciaFiccion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Comedia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Comedia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#DatosDeFacturacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#DatosDeFacturacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Drama -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Drama">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#HoraDeConexion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#HoraDeConexion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Historial_de_busqueda"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#HoraDeDesconexion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#HoraDeDesconexion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Historial_de_busqueda"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#ID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Marca -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Marca">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Dispositivo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Nombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Nombre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Director"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Navegador"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Perfil"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Productor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Romance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Romance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Suspenso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Suspenso">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Terror -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Terror">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#TipoDeDispositivo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#TipoDeDispositivo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Dispositivo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Tipo_Contenido -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Tipo_Contenido">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Tipo_Cuenta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Tipo_Cuenta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Titulo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Titulo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#actuaEn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Algoritmo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Algoritmo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#clasificadoComo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#esSugerido"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Director"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Dispositivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Dispositivo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Historial_de_busqueda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Historial_de_busqueda"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Navegador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Navegador"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Pelicula -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Pelicula">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Perfil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Perfil"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Productor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Productor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Serie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Serie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Contenido"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Accion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Accion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Andrew_Lincoln -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Andrew_Lincoln">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <actuaEn rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#The_walking_dead"/>
+        <Apellido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lincoln</Apellido>
+        <Nombre>Andrew</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Animada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Animada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Celular -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Celular">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Dispositivo"/>
+        <Marca rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motorola</Marca>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Chrome -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Chrome">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Navegador"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#CienciaFiccion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#CienciaFiccion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <incluye rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#sense8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Comedia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Comedia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Comun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Comun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Drama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Drama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <incluye rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Titanic"/>
+        <incluye rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#sense8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#FrancoS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#FrancoS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Gaten_Matarazzo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Gaten_Matarazzo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <actuaEn rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Stranger_Things"/>
+        <Apellido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matarazzo</Apellido>
+        <Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaten</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#HsConexion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#HsConexion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Historial_de_busqueda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#HsDesconexion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#HsDesconexion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Historial_de_busqueda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#James_Cameron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#James_Cameron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Director"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Titanic"/>
+        <Apellido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cameron</Apellido>
+        <Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Jamie_Clayton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Jamie_Clayton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <actuaEn rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#sense8"/>
+        <Apellido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clayton</Apellido>
+        <Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaimie</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#JulietaF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#JulietaF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+        <esPropietarioDe rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Premiun"/>
+        <utiliza rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Chrome"/>
+        <Apellido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Francisconi</Apellido>
+        <Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julieta</Nombre>
+        <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">julietafrancisconi@hotmail.com</email>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Kate_Winslet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Kate_Winslet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <actuaEn rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Titanic"/>
+        <Apellido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winslet</Apellido>
+        <Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kate</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Leonardo_DiCaprio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Leonardo_DiCaprio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <actuaEn rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Titanic"/>
+        <Apellido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DiCaprio</Apellido>
+        <Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonardo</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Max_Riemelt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Max_Riemelt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <actuaEn rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#sense8"/>
+        <Apellido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Riemelt</Apellido>
+        <Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Max</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Millie_Bobby_Brown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Millie_Bobby_Brown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <actuaEn rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Stranger_Things"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Netflix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Netflix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Servicio_de_television_en_linea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Norman_Reedus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Norman_Reedus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Actor"/>
+        <actuaEn rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#The_walking_dead"/>
+        <Apellido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reedus</Apellido>
+        <Nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norman</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#PC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#PC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Dispositivo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Premiun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Premiun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Robert_Kirkman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Robert_Kirkman"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Romance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Romance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+        <incluye rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Titanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#SofiaA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#SofiaA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Usuario"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Stranger_Things -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Stranger_Things">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Serie"/>
+        <esActuadoPor rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Gaten_Matarazzo"/>
+        <esActuadoPor rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Millie_Bobby_Brown"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Suspenso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Suspenso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Tablet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Tablet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Dispositivo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Terror -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Terror">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#The_walking_dead -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#The_walking_dead">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Serie"/>
+        <esActuadoPor rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Andrew_Lincoln"/>
+        <esActuadoPor rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Norman_Reedus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Titanic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Titanic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Pelicula"/>
+        <esActuadoPor rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Kate_Winslet"/>
+        <esActuadoPor rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Leonardo_DiCaprio"/>
+        <esDirigidoPor rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#James_Cameron"/>
+        <Titulo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titanic</Titulo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Vip -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Vip">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Cuenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#sense8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#sense8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Serie"/>
+        <esActuadoPor rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Jamie_Clayton"/>
+        <esActuadoPor rdf:resource="http://www.semanticweb.org/ribeiro/ontologies/2017/4/untitled-ontology-3#Max_Riemelt"/>
+        <Titulo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sense8</Titulo>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,745 @@
+\documentclass[a4paper,12pt,twoside,final,spanish]{article}
+%titlepage: pone el título en una página aparte
+%twocolumn
+\usepackage{babel} %Para el lenguaje [spanish]
+\usepackage[utf8]{inputenc} %Para reconocer todos los símbolos
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[margin=2cm]{geometry} %Márgenes
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{enumerate}
+%\usepackage{hyperref}
+%\pagestyle{headings}
+\usepackage{titletoc} %Para hacer el índice
+
+%---
+\usepackage{geometry} %Algo de las líneas del pie y encabezados
+\geometry{text={7in,9.5in},headheight=15pt}
+%\textwidth = 7 in
+%\textheight = 9.5 in
+%\oddsidemargin = -0.25 in
+%\evensidemargin = 0.0 in
+%\topmargin = -0.25 in
+%\headheight = 0.0 in
+%\headsep = 0.0 in
+\setlength{\parskip}{0.1in}
+\setlength{\parindent}{0.0in}
+%---
+\usepackage{fancyhdr} %Para usar encabezados y pies personalizados
+	\pagestyle{fancy}
+	\fancyhf{}
+	% E: par
+	% O: impar
+	\fancyhead[LE,RO]{Tecnologías para la Web Semántica} 
+	\fancyhead[RE,LO]{Resumen P1}
+	\fancyfoot[RE,LO]{Darién Julián Ramírez}
+	\fancyfoot[LE,RO]{\thepage}
+	\renewcommand{\footrulewidth}{1pt}
+%---
+\usepackage{listings} %Para escribir códigos
+\lstset{language=XML,
+	basicstyle=\footnotesize,
+	numbers=left,
+ 	stepnumber=1,
+	numbersep=8pt,
+	showspaces=false,               % show spaces adding particular underscores
+  	showstringspaces=false,         % underline spaces within strings
+  	frame=lines,                   % adds a frame around the code
+	tabsize=4,                      
+  	captionpos=b,                   % sets the caption-position to bottom
+  	breaklines=true,                % sets automatic line breaking
+}
+%---
+
+\title{\Huge Tecnologías para la Web Semántica\\
+Resumen\\
+Parcial 1}
+\author{Darién Julián Ramírez}
+\date{\vspace{-5ex}}
+
+\begin{document}
+
+\maketitle %Crea la página de título
+
+\tableofcontents %Genera el índice
+
+\cleardoublepage
+
+\section{Visión de la Web Semántica}
+
+\subsection{¿Cómo funciona la Web hoy?}
+
+\begin{itemize}
+\item Tráfico desde buscadores:
+	\begin{itemize}
+	\item Miles de resultados con poca precisión.
+	\item Baja respuesta.
+	\item Resultados altamente sensibles al vocabulario.
+	\item  Resultados inconexos, páginas en vez de sitios.
+	\end{itemize}
+	
+\item Recuperación de información:
+	\begin{itemize}
+	\item Intensiva en tiempo y trabajo del usuario.
+	\item Información no clasificada.
+	\item Informacion difícil de procesar.
+	\end{itemize}
+	
+\item Aplicaciones aisladas.
+
+\item Buscadores de sitios.
+
+\item Ambigüedad (diferentes maneras de referirse a lo mismo) y falta de precisión (referencia a distintas entidades con el mismo término).
+
+\item Los datos no están inmediatamente disponibles para ser procesados por otro software.
+
+\item Los datos no están interconectados, cada sitio es una \textit{isla}.
+
+\item No existe la capacidad de interpretar sentencias para extraer información útil.
+
+\item La mayor parte del contenido Web está diseñado para la lectura de humanos, no para que los programas puedan manipularlos significativamente.
+
+\item Un espacio de información global.
+
+\item Recursos enlazados a otros recursos.
+
+\item Representa la información usando lenguaje natural, gráficos, multimedia, diseños de las páginas.
+
+\item Los humanos pueden procesar esta información fácilmente, deducen hechos desde información parcial, crean asociaciones mentales y asimilan información desde distintos sentidos.
+\end{itemize}
+
+\subsection{De la Web actual a la Web Semántica}
+
+\begin{itemize}
+\item Hacer que las máquinas entiendan significados.
+
+\item Hacer los datos más inteligentes (W3C).
+
+\item El objetivo es que la semántica se convierta en la protagonista.
+
+\item La semántica es la parte de la lingüística que estudia la forma de las estructuras léxicas y los procesos mentales a través de los cuales los seres humanos damos sentido a las expresiones lingüísticas.
+
+\item Dotando de más semántica a la web, lo que se busca es resolver los problemas que en la actualidad causan los entornos digitales carentes de semántica, dificultando en ocasiones la búsqueda de información.
+
+\item Máquinas que comprendan significados.
+
+\item Interoperabilidad de la información.
+
+\item Búsquedas más eficientes: resultados precisos en menos tiempo.
+
+\item Usuario ocupado en la toma de decisiones y no en las tareas repetitivas.
+\end{itemize}
+
+\subsection{¿Qué es la Web Semántica?}
+
+\begin{itemize}
+\item Una red de significados.
+
+\item Información clasificada.
+
+\item Jerarquía de datos.
+
+\item Una web semántica es una red de datos que pueden ser procesados directa o indirectamente por máquinas. Es una web extendida que permitirá a humanos y máquinas trabajar en cooperación mutua.
+
+\item Datos procesables por los humanos + \textbf{datos procesables por las máquinas}.
+
+\item Desarrollo de lenguajes para expresar meta-información comprensible por maquinas.
+
+\item Desarrollo de herramientas y arquitecturas que utilicen esos lenguajes.
+
+\item Desarrollo de aplicaciones que provean un nuevo nivel de servicios.
+
+\item La Web Semántica es una visión: La idea de tener datos en la Web definidos y vinculados de manera que puedan ser utilizados por máquinas no sólo con propósitos de muestra sino para automatización, integración y reutilización de datos entre diferentes aplicaciones.
+
+\item Persigue el establecimiento de una forma universal de representar las relaciones  entre los datos y entre éstos y sus significados.
+
+\item La promesa es una enorme facilidad para encontrar información relevante de forma  potencialmente sencilla.
+
+\item Uso de metadatos, estándares, ontologías, lógica, motores de inferencia y agentes inteligentes.
+\end{itemize}
+
+\textbf{Semántica}: entendida como, significado procesable por máquinas.
+
+\textbf{Metadatos}: entendidos como contenedores de información semántica sobre los datos.
+
+\textbf{Estándares}: entendidos como, especificaciones que regulan la realización de ciertos procesos para garantizar la interoperabilidad.
+
+\textbf{Ontologías}: entendidas como, el conjunto de términos y relaciones entre ellos que describen un dominio de aplicación concreto.
+
+\textbf{Agente inteligente:} Un agente inteligente, es una entidad capaz de percibir su entorno, procesar tales percepciones y responder o actuar en su entorno de manera racional, es decir, de manera correcta y tendiendo a maximizar un resultado esperado.
+
+\textbf{Buscador semántico:}  es aquél que realiza el rastreo atendiendo al significado del grupo de palabras que se escriben y no basándose en las actuales etiquetas.
+En pocas palabras, un buscador inteligente.
+
+\section{Anotaciones Semánticas I - Metadatos}
+
+\subsection{Continuidad Semántica}
+
+\subsubsection{Semántica implícita}
+	\begin{itemize}
+	\item Entendimiento compartido derivado del consenso humano.
+	\item Desventajas:
+		\begin{itemize}
+		\item Ambigüedad.
+		\item Desacuerdos en el significado de un término.
+		\end{itemize}
+	\end{itemize}
+	
+\subsubsection{Semántica informal (explícita)}
+	\begin{itemize}
+	\item Semántica explícita y expresada de manera informal.
+	\item Especificadas por humanos en lenguaje de trabajo.
+	\item Especificaciones UML utilizadas para el desarrollo de herramientas.
+	\item Desventajas:
+		\begin{itemize}
+		\item Persistencia de ambigüedad.
+		\item Baja probabilidad que dos implementaciones sean consistentes y 					compatibles.
+		\item Problemas cuando se requiere interoperabilidad.
+		\end{itemize}
+	\item Esfuerzos para crear semánticas formales.
+	\end{itemize}
+	
+\subsubsection{Semántica formal para procesamiento humano}
+	\begin{itemize}
+	\item Semántica explícita expresada en lenguaje formal sólo para procesamiento 			humano. Documentación formal.
+	\item Axiomas y definiciones en Ontologías para empresas se crearon sin la 				expectativa de ser utilizadas para inferencia automatizada. El objetivo primario 		era ayudar a comunicar el significado pretendido a las personas.
+	\item Desventaja: elimina la ambigüedad pero persiste la presencia de 					humanos en el ciclo.
+	\end{itemize}
+
+\subsubsection{Semántica Procesable por Máquinas}
+	\begin{itemize}
+	\item Representar las semánticas formalmente y permitir a las máquinas procesarlas 	para dinámicamente descubrir qué significa el contenido y cómo se utiliza.
+	\end{itemize}
+
+
+\subsection{Web Semántica}
+
+¿Cómo puede una máquina (agente de software) aprender algo acerca del significado de un término que nunca antes había encontrado?
+
+\begin{itemize}
+
+\item Esta evolución tomorá lugar:
+	\begin{itemize}
+	\item Trasladándose a través de la contunuidad semántica desde semántica implícita 	a  semánticas formales procesables por máquinas.
+	\item Reduciendo el contenido Web semántico no especificado.
+	\item Desarrollando mapeos semánticos y capacidades de traducción donde las 			diferencias persistan.
+	\end{itemize}
+
+\item Frente a la semántica implícita, el crecimiento caótico de recursos, y la ausencia de una organización clara de la Web actual, la Web semántica aboga por clasificar, dotar de estructura y anotar los recursos con semántica explícita procesable por máquinas.
+
+\item Colocar datos en contexto mediante la adición de metadatos.
+\end{itemize}
+
+\subsection{Metadatos}
+
+\begin{itemize}
+\item Los metadatos son datos acerca de los datos.
+
+\item Datos acerca de los datos producidos por una institución y/o personas y de los servicios por ellas ofrecidos, proporcionados en forma estandarizada.
+
+\item Información estructurada que se crea específicamente para describir recursos.
+
+\item En diversos campos de la informática, como la recuperación de información o la Web Semántica, los metadatos en etiquetas son un enfoque importante para construir un puente sobre el intervalo semántico.
+
+\item Mecanismo para etiquetar, catalogar, describir y clasificar los recursos presentes en la World Wide Web con el fin de facilitar la posterior búsqueda y recuperación de la información.
+
+\item Dato estructurado sobre la información, o sea, información sobre información, datos sobre datos. 
+
+\item Datos que se pueden guardar, intercambiar y procesar estructurados de tal forma que permiten ayudar a la identificación, descripción, clasificación y localización del 
+contenido de un documento o recurso web y que sirven para su recuperación.
+
+\item Tienen función de localización, identificación y descripción de recursos, legibles e interpretables por máquina.
+\end{itemize}
+
+\subsection{¿Qué es un estándar?}
+
+Es una especificación que regula la realización de ciertos procesos o la fabricación de componentes para garantizar la interoperabilidad. Ejemplo: DublinCore.
+
+\section{Anotaciones Semánticas II - Ontologías}
+
+\subsection{¿Qué es una Ontología?}
+
+\begin{itemize}
+\item Define los términos y relaciones básicos que comprenden el vocabulario de un área así como las reglas que combinan términos y relaciones para definir extensiones del vocabulario.
+
+\item Es una especificación explícita de una conceptualización.
+
+\item Es una especificación formal de una conceptualización compartida
+
+\item Puede tomar una variedad de formas, pero será necesario incluir un vocabulario de términos y algunas especificaciones sobre su significado. Esto incluye definiciones y una indicación de cómo se interrelacionan los conceptos, lo que colectivamente impone una estructura  en el dominio y restringe la posible interpretación de los términos.
+
+\item Reutilizar: construir nuevas aplicaciones a partir de componentes existentes.
+
+\item Compartir: utilización del mismo componente por diferentes recursos.
+
+\item Usualmente se construyen en forma cooperativa por diferentes grupos de personas en diferentes ubicaciones.
+
+\item Una ontología es una 6-tupla que consiste en conceptos, relaciones, jerarquías, una función que relaciona conceptos no-taxonómicamente, un conjunto de axiomas, y un conjunto de reglas.
+\end{itemize}
+
+\subsection{¿Para qué desarrollar una Ontología?}
+
+\begin{itemize}
+\item Para compartir entendimiento común de la estructura de la información entre personas o agentes de software.
+
+\item Para permitir la reutilización del conocimiento de un dominio.
+
+\item Para hacer explícitas las afirmaciones de un dominio.
+
+\item Para separar el dominio del conocimiento del dominio operacional.
+
+\item Para analizar el dominio del conocimiento.
+
+\item Apuntan a capturar conocimiento consensuado de un modo genérico, para que este pueda ser reutilizado y compartido a través de aplicaciones de software y por grupos de personas.
+\end{itemize}
+
+\subsection{Tipos de Ontologías}
+
+\subsubsection{Según la riqueza de su estructura interna}
+
+\begin{itemize}
+\item \textbf{Catálogo:}
+
+Vocabularios controlados: lista finita de términos.
+
+\begin{itemize}
+\item Lista ordenada o clasificada sobre cualquier tipo de objetos (monedas, bienes a la venta, documentos, entre otros) o en su defecto personas.
+
+\item Conjunto de publicaciones u objetos que se encuentran clasificados normalmente para la venta.
+
+\item Publicación empresarial cuyo fin primero es el de la promoción de aquellos productos o servicios que una empresa ofrece.
+
+\item Está compuesto principalmente por imágenes de los productos o servicios que se ofrecen en la empresa y que pueden ir acompañadas de breves descripciones, precio o beneficios del producto.
+
+\item Es una comunicación visual de lo que se produce.
+
+\item Pueden utilizarse para presentaciones individuales y detalladas de un determinado producto que por ejemplo está recién saliendo a la venta.
+\end{itemize}
+
+\item \textbf{Glosario:}
+
+Son listas de términos con sus significados expresados en lenguaje natural. 
+
+\begin{itemize}
+\item Un glosario es un catálogo que contiene palabras pertenecientes a una misma disciplina o campo de estudio, apareciendo las mismas explicadas, definidas y comentadas.
+
+\item Puede ser un catálogo de palabras desusadas o del conjunto de comentarios y glosas sobre los textos de un autor determinado.
+
+\item Suele ser incluido al final o al comienzo de un libro o de una enciclopedia, con el objetivo de complementar la información que el mismo proporciona.
+
+\item Son elaborados por especialistas en los campos sobre los cuales se ocupan y apuntan a llegar más allá de aquellos interesados en la materia sobre la cual se ocupan.
+
+\item Ejemplos de glosarios:
+	\begin{itemize}
+	\item Glosario educativo.
+	\item Glosario de términos.
+	\item Glosario ambiental.
+	\item Glosario informático.
+	\item Glosario de salud.
+	\item Glosario de términos médicos.	
+	\end{itemize}
+\end{itemize}
+
+\item \textbf{Tesauro:}
+
+Proveen semánticas adicionales entre términos, por ejemplo, información referida a sinónimos.
+
+\begin{itemize}
+\item Vocabulario controlado para representar de manera unívoca el contenido de los documentos y de las preguntas, así como para ayudar al usuario en el tratamiento de la información.
+
+\item Diccionario que muestra la equivalencia entre los términos o expresiones del lenguaje natural y aquellos términos normalizados procedentes del lenguaje documental, así como las relaciones semánticas que existen entre los términos.
+
+\item Compilación de palabras y frases que muestran sus sinónimos, sus jerarquías y cuya función es suministrar un vocabulario normalizado para la recuperación y almacenamiento de la información.
+\item Norma ISO:
+	\begin{itemize}
+	\item Según su función un tesauro es un instrumento de control de la terminología 		que se utiliza mediante la transposición del lenguaje natural (utilizado por los 		usuarios, indexadores y en los documentos) a un lenguaje más estricto como es el 		documental. 
+	\item Según su estructura es un vocabulario controlado y dinámico de términos con 		relaciones semánticas entre ellos y que se aplican a campos temáticos particulares 	del conocimiento.
+	\end{itemize}
+
+\item En líneas generales, un tesauro comprende lo siguiente:
+	\begin{itemize}
+	\item Un listado de términos preferidos, que se los ordena en forma alfabética, 
+	temática y jerárquicamente.	
+	\item Un listado de sinónimos de esos términos preferidos, llamados descriptores, 		con la leyenda "úsese (término preferido)" o una indicación similar.
+	\item Una jerarquía o relaciones entre los términos. Esto se expresa con la 			identificación de \textit{términos más generales} y \textit{términos más 				restringidos}.
+	\item Las definiciones de los términos, para facilitar la selección de los mismos 		por parte del usuario.
+	\item Un conjunto de reglas para usar el tesauro.
+	\end{itemize}
+\end{itemize}
+
+\item \textbf{\textit{Es un} - informal:}
+
+Las jerarquías informales \textit{Es un}, son jerarquías de términos que no corresponden a una subclase estricta, por ejemplo, los términos \textbf{auto} de \textbf{alquiler} y \textbf{hotel} podrían ser modelados informalmente bajo la jerarquía \textbf{viaje} ya que se considerarían partes clave de un viaje.
+
+Si \textbf{perfume} es subclase de \textbf{ropa}, heredaría la propiedad \textit{estaHechoDe} y heredaría los valores de dicha propiedad.
+
+\item \textbf{\textit{Es un} - estricta:}
+
+En este caso existe una relación estricta entre instancias de una clase y de las superclases correspondientes. Su objetivo es explotar el concepto de herencia.
+
+Si B es subclase de A, entonces si un objeto es instancia de B, también es instancia de A. Las relaciones \textit{Es un} estrictas son necesarias para la explotación de la herencia.
+
+\item \textbf{Marcos:}
+
+Son ontologías que incluyen tanto clases como sus propiedades, las cuales pueden ser heredadas por otras clases en los niveles mas bajos de una taxonomía formal \textit{Es un}.
+
+\item \textbf{Restricciones de valor:}
+
+Expresan restricciones de acuerdo al tipo de dato de una propiedad, por ejemplo, tipo: fecha.
+
+Las clases incluyen información acerca de propiedades. Se determinan restricciones en los valores de una propiedad. Ejemplo: La propiedad precio puede estar restringida entre ciertos valores (rango) y \textit{estaHechoDe} puede completarse seleccionando una lista de materiales.
+
+\item \textbf{Restricciones lógicas:}
+
+Expresan relaciones lógicas entre términos y otras relaciones mas detalladas, por ejemplo, la disyunción, relaciones inversas, etc. Son las ontologías más expresivas.
+\end{itemize}
+
+\subsubsection{Según su profundidad de modelado}
+
+\begin{itemize}
+\item \textbf{Ontologías livianas:}
+	\begin{itemize}
+	\item  Conceptos.
+	\item Taxonomías de conceptos.
+	\item Relaciones entre conceptos.
+	\item Propiedades que describen relaciones.
+	\end{itemize}
+
+\item \textbf{Ontologías pesadas:}
+	\begin{itemize}
+	\item Modelan un dominio de manera más profunda.
+	\item Agregan axiomas y restricciones a las anteriores.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Componentes}
+
+Una ontología tiene los siguientes tipos de entidades:
+
+\subsubsection{Clases o términos}
+
+	\begin{itemize}
+	\item Conjunto de individuos que tienen una característica común.
+	\item Representa conceptos en un sentido amplio.
+	\item Se organizan en taxonomías y se aplican mecanismos de herencia.
+	\item Pueden representar conceptos abstractos o específicos.
+	\end{itemize}
+
+\textbf{Taxonomía:} vocabulario controlado ordenado jerárquicamente. Una taxonomía define la clasificación de términos y los principios que rigen esa clasificación. Las relaciones de una taxonomía están dadas por \textit{Es un}.
+
+\textbf{Vocabulario controlado:} lista cerrada de términos definidos y únicos (sin ambigüedad).
+
+\subsubsection{Propiedades}
+
+	\begin{itemize}
+	\item Enlazan individuos en parejas.
+	\item Atributos que describen un objeto.
+	\item Representa un tipo de asociación entre conceptos de un dominio 					(interacción).
+	\end{itemize}
+	
+\subsubsection{Individuos o instancias}
+
+	\begin{itemize}
+	\item Los objetos del dominio a representar.
+	\item Representa miembros de una clase o concepto (objetos) indivisibles.
+	\end{itemize}
+	
+\subsubsection{Axiomas}
+
+	\begin{itemize}
+	\item Modelan sentencias que son siempre verdaderas.
+	\item Representan conocimiento que no puede ser formalmente definido por los otros 	componentes.
+	\item Se utilizan para verificar la consistencia del conocimiento almacenada en 		una base de conocimiento
+	\item Permiten inferir nuevo conocimiento.
+	\end{itemize}
+
+\subsection{Clasificación}
+
+\subsubsection{Ontologías de Alto Nivel}
+
+\begin{itemize}
+\item Describen y proponen conceptos generales a los que todos lo términos en ontologías existentes deberían vincularse. Ejemplo: espacio, tiempo, materia, objeto.
+\item Los términos son los mismos a través de diferentes dominios de conocimiento.
+\item Son independientes de un dominio o problema particular.
+\item Su intención es unificar criterios entre grandes comunidades de usuarios. 
+\end{itemize}
+
+\subsubsection{Ontologías de Dominio}
+
+\begin{itemize}
+\item Describen el vocabulario relacionado a un dominio genérico, por ejemplo,  medicina, por medio de la especialización de los conceptos introducidos en las  ontologías de alto nivel.
+\item Son reutilizables en un dominio especifico dado.
+\item Proveen vocabulario acerca de conceptos dentro de un dominio y sus relaciones, a las actividades que se realizan dentro del dominio y los principios que gobiernan el dominio.
+\item Los conceptos en las ontologías de dominio son usualmente especializaciones de conceptos ya definidos en la ontología de alto nivel. Lo mismo ocurre con las relaciones.
+\end{itemize}
+
+\subsubsection{Ontologías de Tareas}
+
+\begin{itemize}
+\item Describen el vocabulario relacionado a una tarea o actividad genérica, por ejemplo, de diagnóstico o de ventas, por medio de la especialización de los conceptos introducidos en las ontologías de alto nivel.
+\item Proporcionan un vocabulario sistemático de los términos utilizados para resolver los problemas relacionados con las tareas que pueden o no pertenecer al mismo dominio.
+\end{itemize}
+
+\subsubsection{Ontologías de Aplicación}
+
+\begin{itemize}
+\item Describen conceptos que pertenecen a la vez a un dominio y a una tarea particular, por medio de la especialización de los conceptos de las ontologías de dominio y de tareas.
+\item Generalmente corresponden a roles que juegan las entidades del dominio cuando ejecutan una actividad.
+\item Contienen todas las definiciones necesarias para modelar el conocimiento de una determinada aplicación.
+\item Ontologías de aplicación a menudo se extienden y se especializan en el vocabulario del dominio y de las ontologías de tareas para una aplicación dada.
+\end{itemize}
+
+\section{Arquitectura}
+
+\subsection{Principios}
+
+El desarrollo de la Web Semántica tiene lugar por pasos. Cada paso construye una capa encima de otra. Se logra consenso en pequeños pasos mas fácilmente.
+
+\subsubsection{Compatibilidad Descendente}
+
+Agentes con el conocimiento propio de una capa deberían también interpretar y usar información escrita en niveles inferiores (máximo provecho).
+
+\subsubsection{Compresión Parcial Hacia Arriba}
+
+Agentes con el conocimiento de una capa deberían ser capaces de tomar ventaja de información parcial de niveles superiores.
+
+\subsection{Capas}
+
+\subsubsection{Capa URI}
+
+\begin{itemize}
+\item Identificadores de recursos únicos, sin posibilidad de ambigüedad.
+\item Puede ser una localización (URL), un nombre (URN) o ambos.
+\end{itemize}
+
+\subsubsection{Capa XML}
+
+\begin{itemize}
+\item Un lenguaje de etiquetas debe especificar:
+	\begin{itemize}
+	\item Las etiquetas permitidas.
+	\item Las etiquetas requeridas.
+	\item Cómo se distinguen las etiquetas del texto.
+	\item Qué significan las etiquetas.
+	\end{itemize}
+\item XML sólo especifica las tres primeras, la cuarta es especificada por DTD.
+\item Metalenguaje de etiquetas extensibles, se puede \textit{acomodar} a las necesidades de cada uno.
+\item Esquemas que definen y restringen su estructura.
+\item Base sintáctica.
+\item Lenguaje que permite escribir documentos Web estructurados.
+\item Utiliza un vocabulario definido por el usuario.
+\item Establece relaciones básicas pero no una semántica.
+\item Es más fácilmente accesible para máquinas:
+	\begin{itemize}
+	\item  Se describe cada elemento de información.
+	\item Se definen las relaciones a través de la estructura anidada. 
+	\end{itemize}
+\item Es un lenguaje de marcas tal como HTML.
+\item Fue diseñado para describir datos.
+\item Las etiquetas no están predefinidos.
+\item Usa un Document Type Definition (DTD) o un XML Schema para describir los datos.
+\item XML con un DTD o XML Schema fue diseñado para ser auto-descriptivo.
+\item Es recomendación de la W3C.
+\item Es un metalenguaje que no tiene un conjunto fijo de etiquetas pero permite al usuario definir sus propias etiquetas.
+\item Fue diseñado para describir datos.
+\item Reduce la complejidad de la interpretación de los datos.
+\item Mayor facilidad para expandir y actualizar un sistema.
+\end{itemize}
+
+\subsubsection{Capa RDF}
+
+\begin{itemize}
+\item Infraestructura para la Descripción de Recursos.
+\item Modelo de datos básico.
+\item Permite escribir sentencias simples acerca de recursos Web.
+\item No depende de XML pero tiene una sintaxis basada en XML.
+\item Recomendacion del W3C.
+\item Estandariza la definición y uso de metadatos (útil para la representación de datos).
+\item Usa la sintaxis de XML.
+\item Soluciona las carencias de XML, y agrega semántica.
+\item Lenguaje centrado en propiedades, no en recursos.
+\item Posee semántica formal.
+\item \textbf{Tripletas:}
+	\begin{itemize}
+	\item Cada tripleta representa una declaración de una relación entre los elementos 	denotados por los vínculos.
+	\item Cada tripleta tiene 3 partes:
+		\begin{itemize}
+		\item Un sujeto.
+		\item Un objeto.
+		\item Un predicado (también llamado propiedad) que denota una relación. 
+	\end{itemize}
+	\item La dirección del arco es significativa: siempre apunta hacia el objeto.
+	\item Conjunto tripletas: Grafo.
+	\end{itemize}
+\item \textbf{Recursos:}
+	\begin{itemize}
+	\item Podemos ver una \textit{cosa} o \textit{recurso} sobre lo que queremos hacer 	referencia.
+	\item Cada recurso tiene un URI (Universal Resource Identifier).
+	\item Un URI puede ser:
+		\begin{itemize}
+		\item Una URL (dirección web).
+		\item Otra clase de identificador único.
+		\end{itemize}
+	\item Para nosotros una URI es el identificador de un recurso web.
+	\end{itemize}
+\item \textbf{Propiedades:}
+	\begin{itemize}
+	\item Son una clase especial de recursos.
+	\item Describen relaciones entre recursos.
+	\item También se identifican por URI's.
+	\item Brinda un esquema único y global para nombrar a las cosas.
+	\item Reduce el problema del manejo de homónimos de la representación distribuida.
+	\item Homónimos son aquellos términos o palabras que, aunque se escriben o 				pronuncian de manera similar, tienen diferente valor gramatical, como por ejemplo: 	más y mas.
+	\end{itemize}
+\item \textbf{Sentencias:}
+	\begin{itemize}
+	\item Las sentencias establecen las propiedades de los recursos.
+	\item Una sentencia es una tripleta del tipo objeto-atributo-valor.
+	\item Consiste en un recurso, una propiedad y un valor.
+	\item Los valores pueden ser recursos o literales (valores atómicos, strings).
+	\end{itemize}
+\item \textbf{Beneficios:}
+	\begin{itemize}
+	\item RDF tiene suficiente poder expresivo, como base sobre la cual otras capas de 	la arquitectura de la Web Semántica se pueden construir.
+	\item La Web Semántica no se va a programar en RDF pero si con herramientas que 		van a traducir en forma automática representaciones de más alto nivel en RDF.
+	\item Con RDF la información se mapea sin ambigüedad a un modelo.
+	\item Como RDF es un estándar, trabajar sobre RDF equivale a trabajar en HTM en 		los primeros tiempos de la Web.
+	\end{itemize}
+\item \textbf{Desventajas:}
+	\begin{itemize}
+	\item RDF permite la afirmación de sentencias simples que consisten en sujeto-			predicado-objeto.
+	\item No describe lo que estos elementos significan sino que describen las				relaciones que existen entre ellos.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Capa RDFS}
+
+\begin{itemize}
+\item Provee primitivas de modelado para la organización de recursos en jerarquías: clases, propiedades, relaciones de subclases y subpropiedades, y restricciones de dominio y rango.
+\item Está basado en RDF.
+\item Lenguaje primitivo para la definición de ontolgías.
+\item RDF + definición de un vocabulario.
+\item RDFS no provee clases ni propiedades particulares de una aplicación, sino que otorga un framework para describir esas clases y propiedades.
+\item Expresiones RDF SCHEMA son expresiones RDF válidas.
+\item Introduce conceptos ontológicos simples:
+	\begin{itemize}
+	\item Introduce el concepto de clase.
+	\item Define cómo los recursos pueden describirse como pertenecientes a una o más 		clases.
+	\item Describe jerarquía de clases y propiedades.
+	\item Define dominio y rango de propiedades.
+	\end{itemize}
+\item Las clases en un RDF Schema son comparables a las clases en lenguajes de  programación orientada a objetos.
+\item Los recursos pueden ser definidos como instancias de clases o subclases de clases.
+\item Una ontología en RDFS debe comenzar con un nodo raíz RDF donde se incluyen los namespaces para las ontologías RDF y RDFS (ontologías de representación del conocimiento).
+\item El uso de los namespaces permite utilizar los prefijos rdf y rdfs para las primitivas que pertenecen a RDF y RDFS.
+\item \textbf{Clase:}
+	\begin{itemize}
+	\item Una clase representa una colección de recursos.
+	\item Son recursos en si mismas identificados por URI's.
+	\item Un recurso comienza a ser un miembro de una clase utilizando la propiedad 		rdf:type.
+	\item Conceptos son clases y subclases en RDFS.
+	\item Se referencian por nombre o URL a un recurso web.
+	\item \textit{rdfs:subClassOf} indica que una clase es subclase de otra.
+	\end{itemize}
+\item \textbf{Propiedades:}
+	\begin{itemize}
+	\item Propiedades RDF son recursos.
+	\item rdf:Property es la clase de todas las propiedades.
+	\item Atributos de instancia de clases se definen como propiedades en RDFS.
+	\item El dominio de estas propiedades es la clase a la que pertenece el atributo y 	el rango es el tipo del valor del atributo.
+	\item No se definen restricciones de cardinalidad ni valores por omisión.
+	\item Atributos de clase se representan de manera similar.
+	\item El dominio de la propiedad se define como rdfs:class, y se incluye el valor		de la propiedad en la definición de la clase.
+	\end{itemize}
+\item Una referencia URI o un literal utilizado como nodo, identifica lo que el nodo representa.
+\item Una referencia URI utilizada como predicado identifica una relación entre los elementos representados por los nodos que conecta.
+\item Una referencia URI predicado puede también ser un nodo en el grafo.
+\end{itemize}
+
+\subsubsection{Capa OWL}
+
+\begin{itemize}
+\item Necesidad de lenguajes de ontologías mas potentes que expandan RDF-S y que permitan la representación de relaciones mas complejas entre recursos web.
+\item Lenguaje para definir ontologías.
+\item Estándar web.
+\item Construido sobre RDF para procesar información en la web.
+\item Diseñado para ser interpretado por computadoras, no para ser leído por las personas.
+\item Utiliza sintaxis XML.
+\item OWL es similar a RDF pero:
+	\begin{itemize}
+	\item Lenguaje más potente.
+	\item Provee mayor interoperabilidad.
+	\item Mayor vocabulario.
+	\item Mejor sintaxis.
+	\end{itemize}
+\item Limitaciones de RDFS:
+	\begin{itemize}
+	\item  Expresar la disyunción de clases.
+	\item Definir clases como combinación de otras (unión, intersección o 					complemento).
+	\item Expresar restricciones sobre la cardinalidad de propiedades.
+	\item Describir propiedades específicas de las propiedades.
+	\end{itemize}
+\item Requerimientos para lenguajes de representación de ontologías (extensión de 	RDFS):
+	\begin{itemize}
+	\item Una sintaxis bien definida: condición necesaria para información procesable 		por máquinas.
+	\item Una semántica formal: prerequisito para soporte de razonamiento.
+	\item Soporte de razonamiento: verificar la consistencia de la ontología.
+	\item Suficiente poder expresivo.
+	\end{itemize}
+\item La información Web tiene un significado preciso.
+\item La información Web puede ser procesada por computadoras.
+\item Las computadoras pueden integrar la información de la web.
+\item OWL está diseñado para:
+	\begin{itemize}
+	\item Proveer una forma común para procesar el contenido de la web en vez de  			mostrarlo.
+	\item Permitir la lectura por aplicaciones en vez de humanos.
+	\end{itemize}
+\item En una ontología OWL encontramos:
+	\begin{itemize}
+	\item Clases + jerarquía de clases.
+	\item Propiedades (Slots) / values.
+	\item Relaciones. Relaciones entre clases (herencia, disyunción, equivalencia).
+	\item Restricciones. Restricciones sobre las propiedades (tipo, cardinalidad).
+	\item Características de propiedades (transitividad,...).
+	\item Anotaciones.
+	\item Individuos.
+	\end{itemize}
+\item Tareas de razonamiento: clasificación, chequeo de consistencia.
+\end{itemize}
+
+\subsubsection{Capa Lógica}
+
+\begin{itemize}
+\item Enfatizar lenguajes ontológicos.
+\item Desarrollo de aplicaciones específicas de conocimiento declarativo.
+\end{itemize}
+
+\subsubsection{Capa de Prueba}
+
+\begin{itemize}
+\item Generación de prueba, validación.
+\end{itemize}
+
+\subsubsection{Capa de Confianza}
+
+\begin{itemize}
+\item Firma digital.
+\item Recomendaciones, certificaciones.
+\item Seguridad y calidad en operaciones e información.
+\end{itemize}
+
+\subsection{Componentes para una Web Semántica:}
+
+\begin{itemize}
+\item XML nos da la sintaxis para documentos estructurados, pero no agrega semántica.  Permite estructurar documentos según vocabularios definidos por el usuario.
+\item XML Schema restringe la estructura de documentos XML y extiende a XML con datatypes.
+\item RDF es un modelo de datos para objetos ("recursos") y relaciones entre ellos. Provee semántica simple para este modelo de datos, y puede ser representado con sintaxis de XML. Proporciona un modelo para describir aserciones sobre recursos Web.
+\item RDF Schema es un vocabulario para describir clases y propiedades de recursos RDF, usando semántica para jerarquías generalizadas de esas propiedades y clases.   Proporciona primitivas para organizar objetos en jerarquías (ontologías simples).
+\item OWL agrega vocabulario para describir propiedades y clases: entre otros, relaciones entre clases, cardinalidad, igualdad, características de propiedades, etc. Permite expresar relaciones más complejas entre objetos (ontologías complejas).
+\end{itemize}
+
+\end{document}

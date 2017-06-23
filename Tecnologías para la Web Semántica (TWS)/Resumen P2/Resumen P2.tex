@@ -1,0 +1,632 @@
+\documentclass[a4paper,10pt,spanish,oneside]{article}
+
+% Preámbulo - Parte A
+
+\usepackage[utf8]{inputenc} % Soporte para los acentos
+\usepackage[T1]{fontenc}
+
+\usepackage[spanish]{babel} % Capítulos, seciones, etc. en español
+
+\usepackage[margin=2cm]{geometry} % Diseño del documento
+
+\usepackage{multicol} % Escribir doble columna
+
+\usepackage{xcolor} % Usar colores
+\usepackage{pstricks}
+
+\usepackage{enumerate} % Cambiar etiquetas de numeración
+\usepackage[shortlabels]{enumitem} % Manejo adicional de etiquetas de numeración
+
+\usepackage{graphicx} % Manejo de gráficos y figuras
+
+\usepackage{makeidx} % Índice alfabético
+
+% Paquetes adicionales de símbolos matemáticos
+\usepackage{amsmath,amssymb,amsfonts,latexsym,cancel} 
+
+% \usepackage{pslatex} % Fuente Times
+% \usepackage{mathpazo} % Fuente Palatino
+% \usepackage{mathptmx} % Fuente Times
+% \usepackage{bookman} % Fuente Bookman
+\usepackage{newcent} % Fuente New Century Schoolbook
+% \usepackage{helvet} % Fuente Helvetica
+% \usepackage{palatino} % Fuente Palatino
+% \usepackage{pxfonts} % Fuente 
+% \usepackage{txfonts} % Fuente
+% \usepackage{concrete} % Fuente
+% \usepackage{cmbright} % Fuente
+% \usepackage{fourier} % Fuente
+
+\usepackage{booktabs} % Opciones adicionales para el entorno tabular
+\usepackage{longtable} % Para tablas de más de una página
+
+\usepackage{tikz} % Creación de gráficos
+
+% \usepackage{titlesec} % Personalizar capítulos y secciones
+
+% Preámbulo - Parte B
+
+\pagestyle{headings}
+
+%\pagestyle{myheadings} % Numeración de página en la parte superior
+
+\usepackage{titlesec}
+
+\titleformat{\section} % command
+			[display] % shape
+			{\usefont{T1}{phv}{b}{n}\LARGE} % format
+			{} % label
+			{0.5pt} % sep
+			{\thesection.\hspace{0.5em}} % before code
+			
+\titleformat{\subsection} % command
+			[display] % shape
+			{\usefont{T1}{phv}{b}{n}\Large} % format
+			{} % label
+			{0.5pt} % sep
+			{\thesubsection.\hspace{0.5em}} % before code
+			
+\titleformat{\subsubsection} % command
+			[display] % shape
+			{\usefont{T1}{phv}{b}{n}\large} % format, fuentes: lmss,pag,phv
+			{} % label
+			{0.5pt} % sep
+			{\thesubsubsection.\hspace{0.5em}} % before code		
+
+\titleformat{name=\section,numberless}
+			[display]
+			{\usefont{T1}{phv}{b}{n}\LARGE}
+			{}
+  			{1pt}
+  			{}
+			\titlespacing*{\section}{0pt}{1pt}{1pt}
+
+%---
+\usepackage{geometry} %Algo de las líneas del pie y encabezados
+\geometry{text={7in,9.5in},headheight=15pt}
+%\textwidth = 7 in
+%\textheight = 9.5 in
+%\oddsidemargin = -0.25 in
+%\evensidemargin = 0.0 in
+%\topmargin = -0.25 in
+%\headheight = 0.0 in
+%\headsep = 0.0 in
+\setlength{\parskip}{0.1in}
+\setlength{\parindent}{0.0in}
+%---
+\usepackage{fancyhdr} %Para usar encabezados y pies personalizados
+	\pagestyle{fancy}
+	\fancyhf{}
+	% E: par
+	% O: impar
+	\fancyhead[LE,RO]{Tecnologías para la Web Semántica} 
+	\fancyhead[RE,LO]{Resumen P2}
+	\fancyfoot[RE,LO]{Darién Julián Ramírez}
+	\fancyfoot[LE,RO]{\thepage}
+	\renewcommand{\footrulewidth}{1pt}
+%---
+\usepackage{listings} %Para escribir códigos
+\lstset{ %
+  backgroundcolor=\color{lightgray},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{green},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=SQL,                 % the language of the code
+  morekeywords={*,FOR},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{red}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%---
+
+% Preámbulo - Parte B
+
+\title{\Huge\usefont{T1}{lmss}{b}{n} Tecnologías para la Web Semántica \\
+			 Resumen \\
+			 Parcial 2}
+\author{Darién Julián Ramírez}
+\date{}
+
+% Cuerpo del documento
+
+\begin{document}
+
+\maketitle % Mostrar título
+
+\tableofcontents % Tabla de contenidos
+
+\cleardoublepage % Deja en blanco para comenzar en una página impar
+
+\section{Ingeniería Ontológica I: Methontology}
+
+\textbf{Metodología:} serie comprensiva, integrada de técnicas o métodos para crear una teoría general de sistemas de cómo debería realizarse una clase de trabajo de pensamiento intensivo.
+
+\textbf{Método:} procedimiento general.
+
+\textbf{Tarea:} asignación de trabajo bien definido por uno o mas miembros de un proyecto.
+
+\textbf{Técnica:} aplicación específica de un método y la manera en que se ejecuta.
+
+\subsection{Proceso de Desarrollo de Ontologías}
+
+Las siguientes tres actividades se llevan a cabo cuando se construyen ontologías.
+
+\subsubsection{Actividades de Gestión de Ontologías}
+
+\begin{enumerate}[I.]
+
+\item \textbf{Cronograma:}
+	
+	\begin{itemize}
+	\item Identifica tareas a realizar y su orden.
+	\item Especifica horarios y recursos necesarios.
+	\end{itemize}
+
+\item \textbf{Control:}
+
+\item \textbf{Aseguramiento de Calidad:}
+
+\end{enumerate}
+
+\subsubsection{Actividades Orientadas al Desarrollo de Ontologías} 
+
+\begin{enumerate}[I.]
+
+\item \textbf{Pre-desarrollo:}
+
+	\begin{itemize}
+	\item Estudio de entorno (plataformas, aplicaciones, etc.)
+	\item Estudio de factibilidad.
+	\end{itemize}
+
+\item \textbf{Desarrollo:}
+
+	\begin{itemize}
+	\item Especificación de razones de construcción, usos de la ontología, usuarios 		finales.
+	\item Conceptualización.
+	\item Formalización.
+	\item Implementación.
+	\end{itemize}
+
+\item \textbf{Post-desarrollo:}
+
+	\begin{itemize}
+	\item Mantenimiento.
+	\item Reutilización.
+	\end{itemize}
+
+\end{enumerate}
+
+\subsubsection{Actividades de Soporte de Ontologías} 
+
+\begin{itemize}
+\item Se realizan en forma simultánea con las actividades de desarrollo.
+\item Incluyen adquisición de conocimiento, evaluación, integración, mezclado, alineación, documentación y configuración.
+\end{itemize}
+
+\subsection{Methontology}
+
+\subsubsection{Especificación}
+
+Desarrollar un documento que contenga la meta de la ontología, nivel de granularidad, alcance y propósito. Identificar los términos a representar, sus características y relaciones.
+
+\textbf{Preguntas de competencia:}
+
+\begin{itemize}
+\item Dado un conjunto de escenarios informales, se identifican un conjunto de preguntas de competencia en lenguaje natural.
+\item Serán respondidas por la ontología una vez que este expresada en lenguaje formal.
+\item Juegan el rol de un tipo de especificación de requerimientos con la que la ontología podrá ser evaluada.
+\item Ejemplo: Dadas las preferencias de un pasajero (viaje cultural, viaje en la montaña, playa, etc.) y algunas restricciones económicas, ¿qué destino es el más apropiado?
+\end{itemize}
+
+\textbf{Técnicas de adquisición de conocimiento:}
+
+\begin{itemize}
+\item Reglas generales:
+
+	\begin{itemize}
+	\item Aislar al experto de su trabajo por períodos cortos de tiempo.
+	\item Enfocarse sobre el conocimiento esencial.
+	\item Recolectar conocimiento de diferentes expertos.
+	\end{itemize}
+
+\item Resultados:
+
+	\begin{itemize}
+	\item Personas no expertas podrán entender el conocimiento.
+	\item El conocimiento podrá ser evaluado.
+	\end{itemize}
+
+\item Técnicas de generación de protocolo:
+
+	\begin{itemize}
+	\item Diferentes tipos de entrevistas no estructuradas, semi-estructuradas y 			estructuradas.
+	\item Diferentes técnicas de reporte.
+	\item Diferentes tipos de técnicas de observación.
+	\end{itemize}
+
+\item Técnicas de análisis de protocolo:
+
+	\begin{itemize}
+	\item Usadas con transcripciones de entrevistas u otra información textual.
+	\item Útiles para identificar varios tipos de conocimiento (objetivos, 					decisiones, relaciones y atributos.
+	\item Actúan como vínculo entre el uso de técnicas basadas en protocolo y técnicas 	de modelado de conocimiento.
+	\end{itemize}
+	
+
+\item Técnicas de generación de jerarquías:
+
+	\begin{itemize}
+	\item Útiles para construir taxonomías u otras estructuras jerárquicas (árboles de 	decisión).
+	\end{itemize}
+
+\item Técnicas basadas en matrices:
+
+	\begin{itemize}
+	\item Se basan en construir y rellenar una matriz de dos dimensiones (tabla). Por 		ejemplo: tabla de conceptos y propiedades (atributos y valores), problemas y 			soluciones; tareas y recursos.
+	\end{itemize}
+
+\item Técnicas basadas en diagramas:
+
+	\begin{itemize}
+	\item Generación y uso de mapas conceptuales, redes de transición de estados, 			diagramas de evento y mapas de procesos.
+	\item Útiles para capturar el \textit{qué, cómo, donde, quién y por qué} de tareas 	y eventos.
+	\item Se ha comprobado empíricamente que la gente comprende muy bien la notación 		gráfica, mucho mejor que otros formalismos como la lógica de predicado.
+	\end{itemize}
+	
+\item Técnicas de ordenamiento:
+
+	\begin{itemize}
+	\item Utilizadas para capturar la forma en que las personas comparan y ordenan 			conceptos.
+	\item Conducen al descubrimiento de conocimiento acerca de las clases, las  			propiedades y las prioridades.
+	\end{itemize}
+
+\item Manuales de instrucciones o libros almacenan conocimiento que puede ser extraído sin necesidad de entrevistas.
+
+\item Dificultad por parte de algunos expertos, incluso si tienen voluntad de ayudar, de explicar con palabras cómo resuelven un problema, aunque lo sepan resolver perfectamente. Utilizar técnicas alternativas (sin preguntas).
+
+\item Técnicas de observación, en las que el ingeniero observa al experto trabajando e intenta entender y duplicar sus métodos de resolver el problema.
+
+\item Técnicas intuitivas, en las que el ingeniero intenta actuar como si fuera él el experto e implementar su propio conocimiento sobre el dominio.
+\end{itemize}
+
+\textbf{Especificación de requerimientos:}
+
+El objetivo de la especificación de requerimientos en el desarrollo de la ontologías es establecer el propósito con que se construye la ontología, cuáles van a ser sus usos y usuarios posibles y qué requisitos debe cumplir esa ontología.
+
+\subsubsection{Conceptualización}
+
+Organizar el conjunto de términos y sus características en una representación intermedia que el desarrollador de la ontología y los expertos puedan entender. En este caso se construye un glosario de términos, diagrama de relaciones binarias, diccionario de conceptos, tablas de atributos instancias, tablas de atributos clases, tablas de axiomas lógicos, tablas de constantes, tablas de instancias.
+
+\textbf{Modelado conceptual:}
+
+\begin{itemize}
+\item Determina el resto de la construcción de la ontología.
+\item Tiene como objetivo organizar y estructurar el conocimiento adquirido durante la actividad de adquisición del conocimiento (fuerte relación entre ambas actividades).
+\item Convierte una vista informal de un dominio en una especificacion semi-formal.
+\item Utiliza un conjunto de representaciones intermedias, tabulares y gráficas.
+\item IRs facilitan el proceso de transformación entre la percepción de las personas y lenguajes utilizados para la implementación de ontologías.
+\end{itemize}
+
+\textbf{Glosario de términos:}
+
+\begin{itemize}
+\item Incluye los términos relevantes del dominio: conceptos, instancias, atributos (propiedades).
+\item Relaciones entre conceptos.
+\item Descripciones en lenguaje natural.
+\item Sinónimos - acrónimos (siglas).
+\end{itemize}
+
+\textbf{Taxonomía:}
+
+\begin{itemize}
+\item Define la jerarquía de conceptos.
+\item Top-down, bottom-up, middle-out.
+\item Relaciones: Sublcass-off, Disjoint-decomposition, Exhaustive-decomposition, Partition.
+\end{itemize}
+
+\textbf{Diagrama de relaciones:}
+
+\begin{itemize}
+\item Establece relaciones entre conceptos de una taxonomía.
+\item Se debe establecer si los dominios y rangos de cada argumento de cada relación delimita exactamente las clases que son apropiadas para esa relación.
+\item Los errores aparecen cuando dominios y rangos son imprecisos o sobre-especificados.
+\end{itemize}
+
+\textbf{Diccionario de conceptos:}
+
+\begin{itemize}
+\item Especifica cuales son las propiedades y relaciones que describen cada concepto de la taxonomía.
+\item Opcionalmente se incluyen: instancias y atributos de clase e instancias.
+\item Las relaciones especificadas para cada concepto son aquellas cuyo dominio es el concepto.
+\end{itemize}
+
+\textbf{Detalle de relaciones:}
+
+\begin{itemize}
+\item Describe en detalle todas las relaciones binarias incluidas en el diccionario de conceptos.
+\item Para cada relación se debe especificar nombre, nombre del concepto fuente y destino, cardinalidad, su relación inversa y su relación matemática.
+\end{itemize}
+
+\textbf{Atributos de instancias:}
+
+\begin{itemize}
+\item Describe en detalle los atributos de instancia incluidos en el diccionario de conceptos.
+\item Los atributos de instancia poseen valores que pueden diferir para cada instancia del concepto.
+\item Se especifica nombre, tipo, unidad de medida, precision y rango de valores (en el caso de valores numéricos), valores por default si existen, cardinalidad mínima y máxima; atributos de instancia, atributos de clase y constantes utilizadas para inferir valores; atributos que pueden ser inferidos utilizando valores del atributo; fórmulas o reglas que permiten inferir valores del atributo y referencias utilizadas para definir el atributo.
+\end{itemize}
+
+\textbf{Atributos de clase:}
+
+\begin{itemize}
+\item Describe en detalle los atributos de clase incluidos en el diccionario de conceptos.
+\item Describen conceptos y toman su valor en la clase donde se definen.
+\item Se especifica nombre, nombre del concepto donde se define el atributo, tipo, unidad de medida, precisión y rango de valores (en el caso de valores numéricos), cardinalidad; atributos de instancia que pueden ser inferidos utilizando valores del atributo; etc.
+\end{itemize}
+
+\textbf{Constantes:}
+
+\begin{itemize}
+\item Describe en detalle las constantes definidas en el glosario
+de términos.
+\item Se especifica nombre, tipo de valor, unidad de medida para las constantes numéricas, los atributos que pueden ser inferidos usando la constante.
+\end{itemize}
+
+\textbf{Axiomas formales:}
+
+\begin{itemize}
+\item Componentes de modelado importantes en ontologias heavyweight.
+\item Expresiones lógicas siempre verdaderas utilizadas para especificar restricciones en la ontología.
+\item Para cada axioma se especifica nombre, descripción, la expresión lógica que describe formalmente el axioma utilizando FOL; los conceptos, atributos y relaciones a los que se refiere el axioma y las variables utilizadas.
+\end{itemize}
+
+\textbf{Reglas:}
+
+\begin{itemize}
+\item Componentes de modelado importantes en ontologias heavyweight.
+\item Utilizadas para inferir conocimiento en la ontología como valores de atributos,  relaciones de instancia, etc.
+\item Methontology propone describirlas en forma paralela con los axiomas formales una vez definidos los conceptos, sus taxonomías, relaciones, atributos y constantes.
+\item Para cada regla se especifica nombre, descripción, la expresión que describe formalmente la regla; los conceptos, atributos y relaciones a los que se refiere la regla y las variables utilizadas en la expresion. Methontology propone especificar expresiones de reglas utilizando el template if <conditions> then <consequent>.
+\item Lado izquierdo de la regla consiste de conjunciones y átomos.
+\item Lado derecho de la regla es un átomo simple.
+\end{itemize}
+
+\textbf{Instancias:}
+
+\begin{itemize}
+\item Define las instancias relevantes que aparecen en el diccionario de conceptos en una tabla de instancias.
+\item Se especifica nombre, el nombre del concepto al que pertenece y valores de atributos si se conocen.
+\end{itemize}
+
+\subsubsection{Adquisición de Conocimiento}
+
+Este paso se lleva a cabo de manera independiente en la metodología y su ejecución puede coincidir con otros pasos. Por lo general la adquisición de conocimiento se realiza en tres etapas: reuniones preliminares con los expertos, análisis y revisión de la bibliografia asociada al dominio y, una vez que se tiene un conocimiento base, se refina y detalla hasta completar la ontología.
+
+\subsubsection{Integración}
+Identificar ontologías candidatas que puedan ser reutilizadas en la ontología que se esta construyendo e incorporar aquellas piezas de conocimiento que sean de utilidad.
+
+\subsubsection{Implementación}
+
+Codificación del modelo conceptual en un modelo codificado en lenguaje ontológico.
+
+\subsubsection{Evaluación}
+
+Realizar un juicio técnico a la ontología, al ambiente de software asociado y a la documentación con respecto a un esquema de referencia en cada paso de la metodología (requerimientos de especificación, preguntas de competencia y/o el mundo real).
+
+\subsubsection{Documentación}
+
+Detallar clara y exhaustivamente cada paso completado y los productos generados.
+
+\section{Ingeniería Ontológica II: Lenguajes de consultas}
+
+\subsection{RDQL}
+
+\begin{itemize}
+\item Lenguaje de consulta del estilo SQL para consultar sobre las tripletas RDF.
+
+\item Permite especificar patrones que son contrastados con las tripletas del modelo para retornar un resultado.
+
+\item RDQL se utiliza para verificar si las preguntas de competencia se pueden responder con la ontología diseñada.
+\end{itemize}
+
+\begin{center}
+\textbf{Tripleta RDF} \\
+
+\fbox{Sujeto} $\stackrel{Predicado}{\rightarrow}$ \fbox{Objeto}
+\end{center}
+
+\begin{itemize}
+\item \texttt{SELECT <variables>} \\ Especifica las variables a ser retornadas.
+
+\item \texttt{FROM <documentos>} \\ Indica la fuente RDF a ser consultada (URI). Se puede abreviar mediante el uso de \texttt{USING}. Van entre <...>. Para más de una fuente, se separan por comas <... , ... , ...>
+
+\item \texttt{WHERE <expresiones>} \\ Es la parte más importante de la expresión RDQL. Indica las restricciones de las tripletas RDF \textit{(sujeto, predicado, objeto)}. Se expresan por una lista de restricciones separadas por comas \textit{<sujeto , predicado , objeto>}, donde sujeto, predicado y objeto pueden ser un valor literal o una variable RDQL.
+
+\item \texttt{AND <filtros>} \\ Especifica expresiones booleanas. Indica restricciones que las variables RDQL deben seguir.
+
+\item \texttt{USING <espacios\_de\_nombres>\ FOR <URI>} \\ Declara todos los espacios de nombre. Mecanismo de abreviación para URI's a través de la definición de prefijos.
+\end{itemize}
+
+\subsubsection{Ejemplo}
+
+\begin{center}
+\fbox{Zona} $\stackrel{habitaEn}{\leftarrow}$ \fbox{Animal} $\stackrel{esTipo}{\rightarrow}$ \fbox{Grupo}
+\end{center}
+
+¿Dónde habitan los leones?
+
+\begin{lstlisting}
+SELECT ?x FROM <animal.rdf>
+WHERE (<animal:leon>, <animal:habitaEn>, ?x)
+USING animal FOR <http://www.owl-ontologies.com/unnamed.owl>
+\end{lstlisting}
+
+¿Cuáles animales son mamíferos?
+
+\begin{lstlisting}
+SELECT ?x ?grupo FROM <animal.rdf>
+WHERE (?x, <animal:esTipo>, ?grupo) AND (?grupo, <rdf:type>, <animal:mamifero>)
+USING rdf FOR <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+	  animal FOR <http://www.owl-ontologies.com/unnamed.owl>
+\end{lstlisting}
+
+\dotfill
+
+Retornar todos los recursos que tienen la propiedad \textit{First Name} y su valor asociado:
+
+\begin{lstlisting}
+SELECT ?x, ?fname FROM <vcard.rdf>
+WHERE (?x, <vcard:FN>, ?fname)
+USING vcard FOR <http://www.w3.org/2001/vcard-rdf/3.0#N>
+\end{lstlisting}
+
+\subsection{Implementación}
+
+\subsubsection{Jena}
+
+Framework desarrollado por HP Labs para manipular metadatos desde una aplicación Java. \\
+
+Incluye varios componentes:
+
+\begin{itemize}
+\item Un Parser de RDF.
+
+\item API RDF. Permite crear y manipular modelos RDF desde una aplicación Java. Proporciona clases java para representar modelos, recursos, propiedades, literales, declaraciones.
+
+\begin{itemize}
+\item \textit{Recurso:} Todo aquello que se puede describir por una expresión RDF.
+
+\item \textit{Propiedad:} Una característica, atributo o relación usada para describir un recurso.
+
+\item \textit{Literal:} Un tipo de dato simple (String, Integer, etc).
+
+\item \textit{Declaración:} Un recurso junto con una propiedad y con un valor asociado \textit{(sujeto, predicado, objeto)}.
+\end{itemize}
+
+\item API de Ontologias con soporte para OWL, DAML y RDF Schema.
+
+\item Subsistema de razonamiento.
+
+\item Soporte para persistencia.
+
+\item RDQL: Lenguaje de consultas de RDF.
+\end{itemize}
+
+\subsubsection{Jena 1}
+
+\begin{itemize}
+\item Principalmente soporte para RDF.
+\item Capacidades de razonamiento limitadas.
+\end{itemize}
+
+\subsubsection{Jena 2}
+
+\begin{itemize}
+\item Incluye además una API para el manejo de Ontologías.
+\item Soporta el lenguaje OWL.
+\end{itemize}
+
+\subsection{SPARQL}
+
+\begin{itemize}
+\item Similar a SQL para RDF.
+
+\item Lenguaje de consultas Basado en RDQL.
+
+\item Modelo = patrones sobre grafos.
+
+\item \textit{Patrón triple:} Similar a una tripleta RDF \textit{(sujeto, predicado, objeto)} pero cualquier componente puede ser una variable de consulta. Se permiten sujetos literales.
+
+\item \textit{Macheo de un patrón triple a un grafo:} vínculos entre variables y términos RDF.
+
+\item \textit{Consulta:}
+
+\begin{itemize}
+\item \texttt{SELECT} \\ Devuelve todo o un subconjunto de las variables enlazadas en una coincidencia de patrón de consulta. Formatos XML o RDF/XML.
+
+\item \texttt{CONSTRUCT} \\ Devuelve un grafo RDF construido sustituyendo variables en un conjunto de plantillas triples.
+
+\item \texttt{DESCRIBE} \\ Devuelve un grafo RDF que describe los recursos encontrados.
+
+\item \texttt{ASK} \\ Devuelve si un patrón de consulta coincide o no.
+\end{itemize}
+
+\end{itemize}
+
+\section{Ingeniería Ontológica III: Evaluación}
+
+\begin{itemize}
+\item Se describe la evaluación como el análisis de una ontología con respecto a una referencia durante cada etapa de su desarrollo.
+
+\item Los términos verificación y validación se encuentran incluidos en la evaluación.
+
+\item \textit{Verificación y Validación (V\&V):} nombre dado a los procesos que permiten asegurar que la ontología desarrollada satisface su especificación y brinda la funcionalidad esperada por las personas que la solicitaron.
+
+\item La verificación se relaciona con la determinación de si la ontología fue correctamente construida. Mostrar que la ontología cumple con su funcionalidad y con los requerimientos no funcionales establecidos. ¿Se está construyendo el producto correctamente?
+
+\item La validación permite determinar si la ontología captura correctamente el mundo real que se está modelando. mostrar que la ontología cumpla con las expectativas del cliente. Es más general. ¿Se está construyendo el producto correcto?
+
+\item El objetivo de este proceso es determinar si la ontología desarrollada cumple con los principios de diseño y con los requerimientos descriptos en el DERO.
+
+\item Controlar que la ontología responde a las preguntas de competencia formuladas.
+
+\item Realizar un control de la ontología para la detección de anomalías o malas prácticas en su diseño.
+
+\item Existen diversas propuestas que contienen buenas prácticas de diseño para tener en cuenta al momento de desarrollar una ontología.
+
+\item Existe un catálogo de errores comunes entre los que podemos encontrar:
+
+\begin{itemize}
+\item \textit{Crear sinónimos como clases:} Determinar clases equivalentes en vez de especificar sinonimia. Dos términos sinónimos refieren a la misma clase, no a clases diferentes aunque sean equivalentes. Dos términos sinónimos serían \textit{Auto} y \textit{Automóvil}.
+
+\item Utilizar la relación \textit{es} en vez de utilizar elementos propios o primitivas de lenguajes semánticos como: \texttt{rdfs:subClassOf} (expresa subclase), \texttt{rdf:type} (que expresa membresía), \texttt{owl:sameAs} (expresa igualdad entre instancias).
+
+\item \textit{Creación de elementos no conectados:} Los elementos de la ontología están creados sin conexión con los elementos restantes de la ontología quedando miembros aislados. Un ejemplo de este caso es la definición de la clase \texttt{IntegranteEquipo} y no contar en la ontología con la clase \texttt{Equipo}.
+
+\item \textit{Definición de relaciones inversas erróneas:} Definir relaciones como inversas cuando no necesariamente son inversas. Por ejemplo, si algo se compra, \texttt{esComprado} no sería una relación inversa correcta.
+
+\item \textit{Mezclado de diferentes conceptos en la misma clase:} En este caso se crea una clase cuyo identificador hace referencia a dos o más conceptos. Un ejemplo de este error es el identificador \texttt{ProductosyServicios}.
+
+\item \textit{Falta de anotaciones:} En este caso los términos de la ontología carecen de atributos. Esta clase de propiedades facilitan la comprensión de la ontología y su usabilidad desde el punto de vista del usuario.
+
+\item \textit{Falta de disjunción:} En este caso, a la ontología le falta la definición de axiomas de disjunción entre clases o entre propiedades que deberían ser definidas como disjuntas. Por ejemplo, se pueden crear las clases \texttt{par} e \texttt{impar} sin que sean disjuntas, pero esta representación no es correcta basado en la definición de este tipo de números.
+
+\end{itemize}
+
+\item La herramienta OOPS! \textit{(Ontology Pitfall Scanner)} colabora con la detección de los errores catalogados en ontologías (errores comunes).
+
+\begin{itemize}
+\item El motor de inferencia Pellet se utiliza para verificar la consistencia formal de la ontología.
+
+\item Las inconsistencias podrían presentarse relacionadas con la disposición de las clases (clases en la misma jerarquía y clases disjuntas), o pueden estar referidas a la relación entre las clases (rango y dominio), en el tipo de atributo o en las reglas de aplicación de la ontología.
+\end{itemize}
+
+\item Con respecto a los requerimientos, la evaluación se realiza mediante el uso de las preguntas de competencia.
+
+\item Con este fin, la ontología debe instanciarse.
+
+\item Se consideran las preguntas de competencia realizadas en la especificación de requerimientos para ver si la ontología puede responderlas.
+
+\item Las respuestas obtenidas a las preguntas de competencia se deben someter a la consideración de expertos del dominio quienes deben determinar si son aceptables las repuestas.
+
+\item Durante el desarrollo de una ontología se realizan entrevistas con expertos. Es decir, las ontologías se evalúan desde su perspectiva de uso.
+
+\end{itemize}
+
+\end{document}
