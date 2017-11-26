@@ -1,0 +1,24 @@
+clc; clear;
+subplot(1,2,1);
+hold on;
+M=csvread('XOR_trn.csv');
+[f,~]=size(M);
+entradas=[M(:,1:end-1)];
+plot(entradas(:,1),entradas(:,2),'*');
+[w,w0,epo,Te]=ps_entrenamiento(1000,M,0.5,0.2);
+[x2]=ec_rec(entradas(:,1),w0);
+plot(entradas(:,1),x2,'r');
+[x2]=ec_rec(entradas(:,1),w);
+plot(entradas(:,1),x2,'g');
+
+subplot(1,2,2);
+hold on;
+M=csvread('XOR_tst.csv');
+[f,~]=size(M);
+entradas=[M(:,1:end-1)];
+plot(entradas(:,1),entradas(:,2),'*');
+[te]=ps_prueba(M,w);
+[x2]=ec_rec(entradas(:,1),w0);
+plot(entradas(:,1),x2,'r');
+[x2]=ec_rec(entradas(:,1),w);
+plot(entradas(:,1),x2,'g');
