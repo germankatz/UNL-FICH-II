@@ -1,0 +1,399 @@
+\documentclass[a4paper,10pt,spanish]{article}
+
+% Preámbulo - Parte A
+
+\usepackage[utf8]{inputenc} % Soporte para los acentos
+\usepackage[T1]{fontenc}
+
+\usepackage[spanish]{babel} % Capítulos, seciones, etc. en español
+
+\usepackage[margin=1.5cm]{geometry} % Diseño del documento
+
+\usepackage{multicol} % Escribir doble columna
+
+\usepackage{xcolor} % Usar colores
+\usepackage{pstricks}
+
+\usepackage{enumerate} % Cambiar etiquetas de numeración
+\usepackage[shortlabels]{enumitem} % Manejo adicional de etiquetas de numeración
+
+\usepackage{graphicx} % Manejo de gráficos y figuras
+
+\usepackage{makeidx} % Índice alfabético
+
+% Paquetes adicionales de símbolos matemáticos
+\usepackage{amsmath,amssymb,amsfonts,latexsym,cancel} 
+
+% \usepackage{pslatex} % Fuente Times
+% \usepackage{mathpazo} % Fuente Palatino
+% \usepackage{mathptmx} % Fuente Times
+% \usepackage{bookman} % Fuente Bookman
+\usepackage{newcent} % Fuente New Century Schoolbook
+% \usepackage{helvet} % Fuente Helvetica
+% \usepackage{palatino} % Fuente Palatino
+% \usepackage{pxfonts} % Fuente 
+% \usepackage{txfonts} % Fuente
+% \usepackage{concrete} % Fuente
+% \usepackage{cmbright} % Fuente
+% \usepackage{fourier} % Fuente
+
+\usepackage{booktabs} % Opciones adicionales para el entorno tabular
+\usepackage{longtable} % Para tablas de más de una página
+
+\usepackage{tikz,tkz-tab} % Creación de gráficos
+	\usetikzlibrary{matrix,arrows,positioning,shadows,shadings,
+					backgrounds,calc,shapes,tikzmark}
+\usepackage{tcolorbox,empheq} % Creación de cajas
+	\tcbuselibrary{skins,breakable,listings,theorems}
+	
+%	\tcbset{opteqC/.style={skin=beamer,colback=red!5!white}}
+
+\usepackage{gensymb} % Grados Celcius
+
+%\usepackage{titlesec}
+%
+%\titleformat{\section} % command
+%			[display] % shape
+%			{\usefont{T1}{phv}{b}{n}\LARGE} % format
+%			{} % label
+%			{1pt} % sep
+%			{\thesection.\hspace{0.5em}} % before code
+%			
+%\titleformat{\subsection} % command
+%			[display] % shape
+%			{\usefont{T1}{phv}{b}{n}\Large} % format
+%			{} % label
+%			{1pt} % sep
+%			{\thesubsection.\hspace{0.5em}} % before code
+%			
+%\titleformat{\subsubsection} % command
+%			[display] % shape
+%			{\usefont{T1}{phv}{b}{n}\large} % format, fuentes: lmss,pag,phv
+%			{} % label
+%			{1pt} % sep
+%			{\thesubsubsection.\hspace{0.5em}} % before code		
+%
+%\titleformat{name=\section,numberless}
+%			[display]
+%			{\usefont{T1}{phv}{b}{n}\LARGE}
+%			{}
+%  			{1pt}
+%  			{}
+%			\titlespacing*{\section}{0pt}{1pt}{1pt}
+%
+%\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+%\clearpage
+%\thispagestyle{empty}
+
+% Preámbulo - Parte B
+
+\pagestyle{myheadings} % Numeración de página en la parte superior
+
+%\Huge\usefont{T1}{cms}{}{} 
+
+\title{\Huge Inteligencia Computacional \\ Parcial 2} % Título
+\author{Marco Pereyra, Gaspar Oberti, Darién Julián Ramírez} % Autor
+\date{\empty} % Fecha
+
+% Cuerpo del documento
+
+\begin{document}
+
+\maketitle % Mostrar título
+
+\tableofcontents % Tabla de contenidos
+
+\newpage
+
+\section{Unidad V - Lógica borrosa 2}
+
+\begin{enumerate}
+\item Memorias asociativas borrosas como mapeos, reglas borrosas simples y compuestas, ejemplos.
+\item Codificación de reglas borrosas: discretización, memorias asociativas borrosas hebbianas, codificaciones por correlación-mínimo y correlación-producto, bidireccionalidad.
+\item Composición de reglas.
+\item Métodos de máximo y centroide borroso.
+\item Inferencia de Takagi-Sugeno-Kang.
+\item Conjuntos de membresía continuos, representación y composición de varios antecedentes por consecuente.
+\end{enumerate}
+
+\subsection{Memorias asociativas borrosas}
+
+\subsubsection{Video 041 - Memorias asociativas borrosas}
+
+\begin{enumerate}
+\item (2) Explique cuáles son y qué función cumplen cada uno de los componentes de un sistema de borroso.
+\end{enumerate}
+
+\subsubsection{Videos 042 y 043 - FAM correlación mínimo y FAM correlación producto}
+
+\begin{enumerate}
+\item (9) Defina/explique las codificaciones de correlación mínimo y correlación producto. Utilice un ejemplo numérico sencillo (paso a paso) para mostrar ventajas y desventajas de cada una, incluyendo la prueba.
+\end{enumerate}
+
+\subsubsection{Video 044 - FAM composición}
+
+\begin{enumerate}
+\item (3) ¿Cuál es la desventaja que presenta la composición por \textit{sobreposición de reglas} (a través de la función máximo) codificadas en matrices?
+
+\item Explique cómo se realiza la composición de reglas para el caso discreto.
+
+\item ¿Cómo puede aplicarse sobre los conjuntos de salida el factor de activación medido en los conjuntos de entrada?
+\end{enumerate}
+
+\subsubsection{Video 045 - defuzzyfication}
+
+\begin{enumerate}
+\item (3) Explique al menos dos métodos de defusificación, mencionando sus ventajas y desventajas (discreto).
+
+\item Describa un método de centroides para conjuntos borrosos discretos.
+\end{enumerate}
+
+\subsubsection{Video 046 - Conjuntos borrosos continuos}
+
+\begin{enumerate}
+\item (3) Encuentre las ecuaciones de cálculo para el método de centroides con conjuntos triangulares simétricos y activación de reglas por factor de escala.
+
+\item (2) Proponga un método para codificar un número real como conjunto borroso continuo.
+
+\item Desarrolle el método de centroides para el caso de conjuntos continuos trapezoidales.
+
+\item Defina formalmente el método de centroides para conjuntos borrosos continuos y ejemplifique para el caso de la activación de más de dos conjuntos de salida.
+
+\item Describa brevemente el método de defusificación por centroides ejemplificando gráficamente.
+
+\item Explique el método del centroide para el caso en que se activen más de dos conjuntos de salida.
+\end{enumerate}
+
+\subsubsection{Video 047 - dos antecedentes por consecuente}
+
+\begin{enumerate}
+\item (3) ¿Cómo se pueden representar las reglas borrosas cuando hay dos variables de entrada? ¿cómo se implementan los casos en que las relacione un \textit{AND} o un \textit{OR}?
+
+\item (3) Explique el método de centroides para el caso de la activación de dos antecedentes con dos consecuentes.
+
+\item (2) ¿Qué es una memoria asociativa borrosa (FAM) adaptativa y qué utilidad práctica tiene?
+
+\item ¿A qué se denomina antecedente y consecuente de una regla borrosa? Ejemplifique.
+
+\item Explique como se realiza la composición de dos antecedentes para un mismo consecuente.
+
+\item Explique cómo se aplica el método de centroides cuando entre todos los conjuntos activados hay 2 o más reglas que activan, con distinto nivel, un mismo conjunto de salida.
+\end{enumerate}
+
+\subsubsection{Video 048 - comparación NN vs FS vs ES}
+
+\begin{enumerate}
+\item (2) ¿A qué se denomina modelo de \textit{caja negra}? ¿Qué ventajas o desventajas poseen en este sentido los sistemas borrosos en relación a otras técnicas de inteligencia artificial?
+
+\item Ventajas y desventajas relativas de un controlador borroso y uno neuronal.
+\end{enumerate}
+
+\newpage
+
+\section{Unidad VI - Inteligencia colectiva 1}
+
+\begin{enumerate}
+\item Formulación de problemas de búsqueda.
+\item Estrategias de búsquedas informadas y no informadas.
+\item Métodos evolutivos: inspiración biológica, estructura, representación del problema, función de aptitud, mecanismos de selección, operadores elementales de variación y reproducción.
+\item Variantes de la computación evolutiva: algoritmos genéticos, programación genética, estrategias de evolución.
+\item Algoritmos multiobjetivo.
+\end{enumerate}
+
+\subsection{Inteligencia colectiva: introducción}
+
+\subsubsection{Videos 049, 051 y 053 - Autómatas celulares, Sistemas multi-agentes y Ejemplos y aplicaciones}
+
+\begin{enumerate}
+\item (6) Defina autómata de estados finitos y agente inteligente. Grafique una vecindad de Von Neumann de radio igual a 2. Defina autómata celular y describa un ejemplo aplicado a redes neuronales y otro a inteligencia colectiva (modelos de la inteligencia computacional/aplicaciones prácticas).
+\end{enumerate}
+
+\subsubsection{Video 052 - Generalidades}
+
+\begin{enumerate}
+\item (6) ¿Qué es el \textit{comportamiento emergente}? ¿Qué es la \textit{estigmergía}? ¿Cómo se aplica el principio de estigmergía en las colonias de hormigas? (Ejemplifique para ambos casos).
+
+\item Explique cómo un mapa auto-organizativo puede ser considerado un modelo de autómatas celulares. Detalle claramente cuáles serían en este caso todos los elementos de la definiciones formales de autómata de estados finitos y autómata celular.
+
+\item ¿A qué se denomina capacidad de autoorganización en inteligencia colectiva? ¿Cuál es la relación con la autoorganización de un SOM?
+\end{enumerate}
+
+\subsubsection{Búsquedas. Estrategias informadas y no informadas (Georgina)}
+
+\begin{enumerate}
+\item (3) Defina búsqueda informada/heurística. Explique qué tipo de búsqueda representa, cómo funciona y cómo debe ser la función de evaluación de los nodos. Compare las estrategias $A*$ y avara en cuanto a: características, propiedades de optimalidad y completitud, complejidad computacional y espacial. Explique en cada caso.
+
+\item (2) ¿Cuál es la diferencia entre \textit{búsqueda ciega} o \textit{no informada}, y \textit{búsqueda informada} o \textit{heurística}?
+
+\item (2) Defina búsqueda en un espacio de estado. Mencione los dos grupos en los cuales pueden dividirse los algoritmos de búsqueda, explicando brevemente qué caracteriza a cada grupo y mencione un algoritmo de cada tipo.
+
+\item ¿Cuál es la diferencia entre una función de costo ($g(n)$) y una heurística ($h(n)$) cuando se calculan sobre un nodo $n$ de un árbol de búsqueda?
+\end{enumerate}
+
+\subsection{Computación evolutiva}
+
+\subsubsection{Video 054 - Algoritmos genéticos}
+
+\begin{enumerate}
+\item (4) Describa las diferencias entre la evolución según Darwin y según Lamarck ¿Cómo entrenaría una red neuronal (perceptrón simple) con un enfoque Lamarckiano? Destaque las ventajas que podría tener este método. ¿Cómo combinaría las ventajas del enfoque Lamarckiano en un algoritmo evolutivo que respete las reglas básicas de la evolución según Darwin?
+
+\item Explique en qué falla la teoría de Lamarck y cómo podría utilizarse esto para acelerar la convergencia de un algoritmo evolutivo.
+
+\item Proponga un operador basado en las ideas de Lamarck que permita acelerar la convergencia de un algoritmo genético estándar. Comente en qué aspectos se opone su propuesta a la visión Darwiniana pura, donde solamente se utilizarían los operadores de cruza y mutación.
+\end{enumerate}
+
+\subsubsection{Video 059 - Función de aptitud (\textit{fitness})}
+
+\begin{enumerate}
+\item ¿Qué condiciones debe cumplir la función de aptitud? (explique brevemente en cada caso). Liste tres ejemplos de funciones de aptitud basadas en estimadores estadísticos.
+\end{enumerate}
+
+\subsubsection{Video 061 - Operadores}
+
+\begin{enumerate}
+\item (4) ¿Cuáles son los principales problemas (afectan la convergencia) de la selección por rueda de ruleta? Proponga una modificación del método para solucionarlos.
+
+\item (2) Explique el método de selección por ventanas.
+
+\item (2) Describa dos métodos de selección y analice comparativamente sus ventajas y desventajas.
+
+\item Explique cómo se puede afectar la convergencia en los casos de poblaciones caracterizadas por el \textit{mar de mediocres} y el \textit{mar de virtuosos}. Proponga una modificación en la función de aptitud de forma de que no se presenten los problemas de la pregunta anterior.
+
+\item Escriba el algoritmo para implementar el método de selección por medio de la rueda de ruleta.
+\end{enumerate}
+
+\subsubsection{Video 062 - Operadores de variación}
+
+\begin{enumerate}
+\item (5) Explique las diferencias entre \textit{elitismo} y \textit{brecha generacional} (en un método de remplazo), ¿qué rol cumple durante la evolución?.
+
+\item (3) Defina dos operadores de programación genética y ejemplifique en cada caso.
+
+\item (2) Explique cómo se realizan las cruzas y mutaciones en programación genética.
+
+\item Clasifique el tipo de métodos de ajuste para los parámetros de evolución.
+
+\item Explique la función que cumplen los operadores de cruza y mutación en la exploración del espacio de soluciones.
+
+\item ¿Qué sucedería si la probabilidad de mutación fuera 0? ¿Y si fuera 1? 
+\end{enumerate}
+
+\subsection{Variantes de computación evolutiva}
+
+\subsubsection{Video 063 - Algoritmos evolutivos características generales}
+
+\begin{enumerate}
+\item ¿Qué importancia posee el teorema del esquema y en qué principios se basa?
+
+\item Liste tres ventajas y tres desventajas de los algoritmos genéticos.
+\end{enumerate}
+
+\subsubsection{Video 064 - Estrategias de evolución}
+
+\begin{enumerate}
+\item (6) Proponga y describa un operador de \textit{mutación} para representaciones \textit{fenotípicas}.
+
+\item (3) Enumere las principales semejanzas y diferencias (ventajas y desventajas) entre \textit{algoritmos genéticos} (\textit{genotipo}, binaria) y \textit{estrategias de evolución} (\textit{fenotipo}, real).
+\end{enumerate}
+
+\subsubsection{Video 066 - Restricciones en el dominio de aplicación}
+
+\begin{enumerate}
+\item (8) Explique cuatro métodos para representar las restricciones en la solución de un problema real, que intenta ser resuelto mediante un algoritmo evolutivo/genético (durante la evolución). Indique en cada caso cuáles son sus ventajas y desventajas.
+\end{enumerate}
+
+\newpage
+
+\section{Unidad VII - Inteligencia colectiva 2}
+
+\begin{enumerate}
+\item Autómatas de estados finitos y autómatas celulares.
+\item Agentes inteligentes.
+\item Inspiración biológica de los métodos de inteligencia colectiva.
+\item Modelos de vida artificial: comportamiento emergente, autoorganización.
+\item Colonias de hormigas: representación del problema, feromonas, búsqueda de alimento, modelo estocástico, experimento de los dos puentes.
+\item Enjambre de partículas: representación del problema, restricciones, tamaño de partícula, inicialización, ecuaciones de movimiento, distribuciones de proximidad, topología de las poblaciones.
+\end{enumerate}
+
+\subsection{Inteligencia de colonias y enjambres}
+
+\subsubsection{Video 067 - Introducción a colonias de hormigas}
+
+\begin{enumerate}
+\item ¿Qué rol juegan las feromonas en la optimización por colonias de hormigas?
+\end{enumerate}
+
+\subsubsection{Video 068 - Experimento del puente binario}
+
+\begin{enumerate}
+\item (2) ¿Cuál es el factor clave que determina la formación de un único camino en el experimento del puente binario? Explique.
+
+\item Describa el experimento de puente binario enfatizando los aspectos clave para la simulación del comportamiento de una colonia de hormigas, en cuánto a su aplicación en problemas de búsqueda y optimización.
+\end{enumerate}
+
+\subsubsection{Video 069 - Algoritmo de colonia de hormigas simple}
+
+\begin{enumerate}
+\item (5) Desarrolle el algoritmo de \textit{colonia de hormigas simple} (sACO), definiendo claramente todas las variables involucradas.
+
+\item ¿Por qué es necesario, desde el punto de vista algorítmico, reducir la cantidad de feromonas $\sigma_{ij}(t)\leftarrow (1-\rho)\sigma_{ij}(t)$?
+\end{enumerate}
+
+\subsubsection{Video 070 - Sistema de hormigas}
+
+\begin{enumerate}
+\item Explique el mecanismo de depósito de feromonas basado en información local únicamente. ¿Qué ventajas y desventajas tiene en relación al que utiliza información global?
+\end{enumerate}
+
+\subsubsection{Video 072 - Enjambres del mejor global}
+
+\begin{enumerate}
+\item (2) Desarrolle el algoritmo de enjambre de partículas con el mejor global, definiendo claramente todas las variables involucradas.
+\end{enumerate}
+
+\subsubsection{Video 073 - Enjambre del mejor local}
+
+\begin{enumerate}
+\item (2) Dado $v_{ki}(t+1)=v_{ki}(t)+c_{1}r_{1i}[y_{ki}-x_{ki(t)}]+c_{2}r_{2i}[\hat{y}_{ki}-x_{ki}(t)]$, defina los parámetros $c_{1}$ y $r_{2i}$ y describa la función que cumplen en la búsqueda por enjambre.
+
+\item (2) ¿Cuáles son los roles que cumplen la mejor posición personal y la mejor posición del entorno durante la búsqueda de soluciones por medio del algoritmo del enjambre del mejor local?
+
+\item Desarrolle el algoritmo de enjambre de partículas con el mejor local, definiendo claramente todas las variables involucradas.
+
+\item Explique cuál es la principal diferencia entre la optimización por enjambre de partículas local y global, detallando en cada caso la ecuación de actualización de velocidad de las partículas.
+
+\item Explique todos los términos de las ecuaciones de movimiento en un método de enjambre de partículas.
+\end{enumerate}
+
+\newpage
+
+\section{Problemas}
+
+\begin{enumerate}
+
+\item (2) Un proveedor de Internet posee los registros históricos del tráfico en sus servidores a distintas horas del día. Para obtener una buena aproximación de esta función (y hacer predicciones), ha contratado a una consultora informática que propone la siguiente metodología. El aproximador de funciones sería un sistema borroso para el que se optimizaría la definición de sus conjuntos de entrada, salida y reglas mediante un algoritmo genético. A su vez, la probabilidad de mutaciones del algoritmo genético debería ser ajustada durante la evolución mediante un controlador borroso. Se solicita que realice una descripción de cada una de las etapas de este sistema, y el correspondiente diagrama en bloques.
+
+\item Un proveedor de Internet posee los registros históricos del tráfico en sus servidores a distintas horas del día. Para obtener una buena aproximación de esta función (y hacer predicciones), ha contratado a una consultora informática que propone la siguiente metodología. El aproximador de funciones sería un sistema borroso para el que se optimizaría la definición de sus conjuntos de entrada, salida y reglas mediante enjambre de partículas. Se solicita que realice una descripción de cada una de las etapas de este sistema.
+
+\item Proponga un algoritmo evolutivo para resolver el Cubo de Rubik.
+
+\item Se requiere desarrollar un método para programar automáticamente el sistema de navegación de un robot de mensajería para oficinas comerciales. Se ha definido que se utilizaría un controlador borroso y dos cámaras de visión estereoscópicas ubicadas en la parte frontal. El programa del controlador borroso debería encargarse de activar las ruedas a cada lado del robot, conociendo su posición actual y el punto de destino, y evitando los obstáculos que se detecten mediante las cámaras.
+
+\item Proponga un método para determinar automáticamente la duración, colores y posición más adecuada de los mensajes de alerta que se presentan una interfaz web para transacciones bancarias.
+
+\item Proponga un método evolutivo para optimizar un controlador borroso de las velocidades de aprendizaje utilizadas durante el entrenamiento de la capa de salida de una red neuronal con funciones de base radial. Considere como entradas al controlador tanto el error cuadrático cometido por cada neurona como la velocidad de cambio de sus pesos.
+
+\item Se desea optimizar el diseño de un sistema borroso para controlar la velocidad de aprendizaje en cada neurona de una red con retardos en el tiempo (TDNN) utilizada para el reconocimiento de caracteres manuscritos. Proponga un método de optimización que permita encontrar la mejor estructura y los parámetros del controlador borroso.
+
+\item A partir de los datos obtenidos durante el uso de una heladera, se desea desarrollar un sistema de control que mantenga la temperatura interna de la heladera lo más estable posible. Esto implica poder encontrar automáticamente los perfiles de uso (apertura de la puerta en función del tiempo). Proponga un sistema de control, con sus métodos de entrenamiento y operación, para: encontrar los perfiles automáticamente e implementar las políticas de control adecuadas.
+
+\item Proponga un método evolutivo para optimizar un controlador borroso de las velocidades de aprendizaje utilizadas durante el entrenamiento de una red neuronal con funciones de base radial.
+
+\item Proponga una arquitectura neuronal y método de entrenamiento para capturar el comportamiento dinámico de un sistema térmico como el de una habitación cerrada con una única puerta. Indique cómo utilizaría esta red neuronal para diseñar luego un controlador que permita accionar un acondicionador frío-calor.
+
+\item Describa un método para evolucionar aproximadores polinómicos de funciones mediante programación genética, incluyendo todas las definiciones necesarias, como representación de los individuos, función de aptitud, etc.
+
+\item Proponga la representación de los individuos para el diseño de la distribución interna de oficinas en un piso.
+\end{enumerate}
+
+\end{document}
