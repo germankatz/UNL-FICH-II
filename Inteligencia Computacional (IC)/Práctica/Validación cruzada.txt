@@ -1,0 +1,5 @@
+Cross validation (Validación cruzada):
+
+Hold out: dividir %E/%P
+K folding:
+	Leave-k-out (Caso extremo: leave-one-out)
