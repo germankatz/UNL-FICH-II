@@ -1,0 +1,107 @@
+\documentclass[a4paper,10pt,twoside,spanish]{article}
+
+% Preámbulo - Parte A
+
+\usepackage[utf8]{inputenc} % Soporte para los acentos
+\usepackage[T1]{fontenc}
+
+\usepackage[spanish]{babel} % Capítulos, seciones, etc. en español
+
+\usepackage[margin=1.5cm]{geometry} % Diseño del documento
+
+\usepackage{multicol} % Escribir doble columna
+
+\usepackage{xcolor} % Usar colores
+\usepackage{pstricks}
+
+\usepackage{enumerate} % Cambiar etiquetas de numeración
+\usepackage[shortlabels]{enumitem} % Manejo adicional de etiquetas de numeración
+
+\usepackage{graphicx} % Manejo de gráficos y figuras
+
+\usepackage{makeidx} % Índice alfabético
+
+% Paquetes adicionales de símbolos matemáticos
+\usepackage{amsmath,amssymb,amsfonts,latexsym,cancel} 
+
+% \usepackage{pslatex} % Fuente Times
+% \usepackage{mathpazo} % Fuente Palatino
+% \usepackage{mathptmx} % Fuente Times
+% \usepackage{bookman} % Fuente Bookman
+\usepackage{newcent} % Fuente New Century Schoolbook
+% \usepackage{helvet} % Fuente Helvetica
+% \usepackage{palatino} % Fuente Palatino
+% \usepackage{pxfonts} % Fuente 
+% \usepackage{txfonts} % Fuente
+% \usepackage{concrete} % Fuente
+% \usepackage{cmbright} % Fuente
+% \usepackage{fourier} % Fuente
+
+\usepackage{booktabs} % Opciones adicionales para el entorno tabular
+\usepackage{longtable} % Para tablas de más de una página
+
+\usepackage{tikz,tkz-tab} % Creación de gráficos
+	\usetikzlibrary{matrix,arrows,positioning,shadows,shadings,
+					backgrounds,calc,shapes,tikzmark}
+\usepackage{tcolorbox,empheq} % Creación de cajas
+	\tcbuselibrary{skins,breakable,listings,theorems}
+	
+%	\tcbset{opteqC/.style={skin=beamer,colback=red!5!white}}
+
+\usepackage{gensymb} % Grados Celcius
+
+\usepackage{titlesec}
+
+\titleformat{\section} % command
+			[display] % shape
+			{\usefont{T1}{phv}{b}{n}\LARGE} % format
+			{} % label
+			{1pt} % sep
+			{\thesection.\hspace{0.5em}} % before code
+			
+\titleformat{\subsection} % command
+			[display] % shape
+			{\usefont{T1}{phv}{b}{n}\Large} % format
+			{} % label
+			{1pt} % sep
+			{\thesubsection.\hspace{0.5em}} % before code
+			
+\titleformat{\subsubsection} % command
+			[display] % shape
+			{\usefont{T1}{phv}{b}{n}\large} % format, fuentes: lmss,pag,phv
+			{} % label
+			{1pt} % sep
+			{\thesubsubsection.\hspace{0.5em}} % before code		
+
+\titleformat{name=\section,numberless}
+			[display]
+			{\usefont{T1}{phv}{b}{n}\LARGE}
+			{}
+  			{1pt}
+  			{}
+			\titlespacing*{\section}{0pt}{1pt}{1pt}
+
+% Preámbulo - Parte B
+
+\pagestyle{myheadings} % Numeración de página en la parte superior
+
+\title{\Huge\usefont{T1}{cms}{}{} Sistemas Operativos \\
+								  Parcial 2} % Título
+\author{Franco Matzkin y Darién Julián Ramírez} % Autor
+\date{\empty} % Fecha
+
+% Cuerpo del documento
+
+\begin{document}
+
+\maketitle % Mostrar título
+
+\tableofcontents % Tabla de contenidos
+
+\section{Concurrencia e hilos}
+
+\section{Sincronización}
+
+\section{Memoria}
+
+\end{document}
