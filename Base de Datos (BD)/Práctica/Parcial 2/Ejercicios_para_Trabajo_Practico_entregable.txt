@@ -1,0 +1,20 @@
+1)
+
+serial
+
+3)
+
+create function select_variable() returns numeric language plpgsql as $$
+declare precio numeric;
+begin
+	select price into precio from titles
+		where title_id = 'BU1111';
+	return precio;
+end
+$$;
+
+select select_variable()
+
+drop function select_variable()
+
+

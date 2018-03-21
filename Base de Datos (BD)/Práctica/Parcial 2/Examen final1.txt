@@ -1,0 +1,90 @@
+select extract(year from S.ord_date) as anio,P.pub_name as nombre,sum(qty) as cantidad into temp1 from sales S
+	inner join titles T
+		on S.title_id = T.title_id
+	inner join publishers P
+		on P.pub_id = T.pub_id
+	group by S.ord_date,P.pub_name
+	order by S.ord_date,P.Pub_name;
+
+select anio,nombre,sum(cantidad) as cantidad into temp2 from temp1
+	group by anio,nombre
+	order by anio, nombre;
+
+drop table temp1
+drop table temp2
+
+select * from temp1
+select * from temp2
+
+select anio into VentasPorEditorial from temp2
+	group by anio
+	order by anio
+
+select nombre into editoriales from temp2
+	group by nombre
+	order by nombre
+
+select * from VentasPorEditorial
+select * from editoriales
+
+create or replace function hacer_tabla() returns varchar(40) as $$
+declare 
+	nomb varchar(40);
+	cur_edi cursor for select nombre from editoriales;
+	cant numeric;
+	an int;
+	anios VentasPorEditorial;
+begin
+	open cur_edi ;
+	
+	fetch --T-SQL: fetch next
+	cur_edi --T-SQL: from mi_cursor
+	into nomb; --T-SQL: into anio
+
+	while (found) loop
+		execute
+		'alter table VentasPorEditorial
+		add column' || quote_ident(nomb) || 'varchar(40) null';
+
+		select anio into an from anios limit 1;
+		--select anio into anios from VentasPorEditorial;
+		--select anio into an from anios limit 1;
+		
+		while (an is not null) loop			
+			select cantidad into cant from temp2
+				where (nombre = quote_ident(nomb) and anio = an);			
+			
+			execute
+			'update VentasPorEditorial
+			set ' || quote_ident(nomb) || ' = cant
+			where (anio = an)';
+			
+			delete from anios
+			where (anio = an);
+			
+			select anio into an from anios limit 1;
+		end loop;
+
+		drop table anios;
+		
+		fetch --T-SQL: fetch next
+		cur_edi --T-SQL: from mi_cursor
+		into nomb; --T-SQL: into anio
+	end loop;
+	close cur_edi;
+	return nomb;
+end;
+$$ language plpgsql;
+
+begin;
+select hacer_tabla();
+commit;
+
+drop table editoriales
+drop table VentasPorEditorial
+
+
+
+
+
+

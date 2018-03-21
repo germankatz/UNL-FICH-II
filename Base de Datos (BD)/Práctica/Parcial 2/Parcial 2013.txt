@@ -1,0 +1,12 @@
+select title into titulos from titles T
+	where ((select count(*) from titleauthor TA
+			where (T.title_id = TA.title_id)) > 1)
+
+select A.au_id, A.au_lname, A.au_fname, sum(qty*price) "Ventas" into VentasTotales from authors A
+	inner join titleauthor TA
+		on A.au_id = TA.au_id
+	inner join titles T
+		on TA.title_id = T.title_id
+	inner join sales S
+		on T.title_id = S.title_id
+	group by A.au_id, A.au_lname, A.au_fname

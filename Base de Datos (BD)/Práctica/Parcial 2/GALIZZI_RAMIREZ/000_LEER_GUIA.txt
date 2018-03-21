@@ -1,0 +1,19 @@
+Primero creamos la base de datos
+
+create database galizzi_ramirez
+
+Luego importamos las tablas del practico2 (que al final dropeamos) para facilitar la migración. Después se ejecutan los archivos en orden (0, 1, ..., 12).
+
+Errores/cosas que no hicimos:
+
+- En ell modelo físico nos faltó escribir guiones bajos en las variables, lo hicimos a mano y quedó así, en la creación de tablas sí lo hicimos correctamente.
+- Nos faltaron los esquemas porque no los contemplamos inicialmente y no llegamos a hacerlo al final.
+- Claramente falta optimizar, algunos scripts duran más de un minuto, llegando a 5 minutos.
+- La consulta de familiares de afiliados que tienen familiares como afiliados creemos que está bien, pero creemos que no nos funciona porque estamos migrando mal algo, probablemente nos falte cargar la referencia a familiares para las personas fisicas que insertamos como afiliados que a la vez son familiares de un afiliado.
+- En casos hemos usado (y quizás hasta abusado) T-SQL en vez de hacer todo en ANSI, principalmente para facilitar la migración sin importarnos mucho la portabilidad.
+- El trigger lo hicimos solo para insert y no lo pudimos probar debido a falta de tiempo.
+
+
+Integrantes:
+Galizzi, Diego
+Ramirez, Darién

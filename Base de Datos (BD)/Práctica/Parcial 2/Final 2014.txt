@@ -1,0 +1,62 @@
+--Crea una tabla donde se tienen las cantidades vendidas por las editoriales en los distintos años
+select P.pub_id,P.pub_name,sum(S.qty) 'cantidad',year(S.ord_date) 'año' into #cantidades from publishers P
+	inner join titles T
+		on P.pub_id = T.pub_id
+	inner join sales S
+		on S.title_id = T.title_id
+	group by P.pub_id,P.pub_name,year(S.ord_date)
+	order by P.pub_id,P.pub_name,year(S.ord_date)
+
+--select * from #cantidades
+--drop table #cantidades
+
+--Crea la tabla con ventasporeditorial con la columna de los años
+select año into ventasporeditorial from #cantidades
+	group by año
+
+--select * from ventasporeditorial
+--drop table ventasporeditorial
+
+--Agrega todas las columnas a la tabla ventasporeditorial
+--
+declare curtabla cursor
+for select pub_name from #cantidades
+		group by pub_name
+for update 
+
+open curtabla
+declare @editorial varchar(40)
+fetch next from curtabla into @editorial
+while @@fetch_status = 0
+begin
+	alter table ventasporeditorial
+		add @editorial int default null --Problema de asignación
+	fetch next from curtabla into @editorial	
+end
+close curtabla
+deallocate curtabla
+--
+
+--Llena la tabla ventasporeditorial con las cantidades en los distintos años
+--
+declare curexamen cursor
+for select pub_name,cantidad,año from #cantidades
+for update
+
+open curexamen
+declare @nombre varchar(40),
+	@cant int,
+	@año int
+fetch next from curexamen into @nombre,@cant,@año
+while @@fetch_status = 0
+begin
+	update ventasporeditorial
+	set @nombre = @cant
+	where año = @año
+	fetch next from curexamen into @nombre,@cant,@año
+end
+close curexamen
+deallocate curexamen
+--
+
+drop table #cantidades
